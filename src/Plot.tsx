@@ -13,12 +13,13 @@ import {
 import {
   IconCheck,
   IconClose,
+  IconCommon,
   IconMinus,
   IconPlus,
   IconQuestionCircle,
   IconUpload
 } from '@arco-design/web-react/icon';
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BaseWidgetView } from './basewidget';
 import FileSelectModal from './modal/FileSelectModal';
 import RunLogModal from './modal/RunLogModal';
@@ -61,11 +62,10 @@ export default function Plot({
   const [formPlotParams] = Form.useForm();
   const [formCommonParams] = Form.useForm();
 
-  const app = basicPlotApps.find(item => item.id === type);
-
-  if (!app) return <></>;
-
-  const Icon = app.icon;
+  const Icon = useMemo(() => {
+    const app = basicPlotApps.find(item => item.id === type);
+    return app?.icon || IconCommon;
+  }, []);
 
   useEffect(() => {
     refRequest.current = new CommRequest({ widgetView });
