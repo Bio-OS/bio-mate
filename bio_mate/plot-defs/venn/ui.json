@@ -1,0 +1,118 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "required": true,
+      "key": "Set1",
+      "label": "Set1",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中Set1列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "Set2",
+      "label": "Set2",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中Set2列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "Set3",
+      "label": "Set3",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中Set3列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "Set4",
+      "label": "Set4",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中Set4列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "Set5",
+      "label": "Set5",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中Set5列名称"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "alpha",
+      "label": "透明度",
+      "placeholder": "请输入透明度值"
+    },
+    {
+      "type": "input",
+      "key": "labelcolor",
+      "label": "标签颜色",
+      "placeholder": "请输入标签颜色"
+    },
+    {
+      "type": "input",
+      "key": "bordercolor",
+      "label": "边界颜色",
+      "help": "请输入边界颜色,如black",
+      "placeholder": "请输入"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "cex",
+      "label": "各元素缩放比例",
+      "required": true,
+      "placeholder": "请输入",
+      "help": "请输入各元素缩放比例"
+    },
+    {
+      "type": "input.5",
+      "key": "fillcolors",
+      "label": "各组的填充颜色",
+      "required": true,
+      "placeholder": "请输入",
+      "help": "请输入各组的填充颜色，如:[cornflowerblue, green, red, orange, purple]"
+    },
+    {
+      "type": "number.5",
+      "key": "cat_pos",
+      "label": "组标签的位置",
+      "placeholder": "请输入",
+      "help": "请输入调整组标签的位置，例如: [-27, 27,0, 0,135]"
+    }
+  ],
+  "extra": {
+
+  }
+}
