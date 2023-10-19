@@ -27,7 +27,7 @@ export default function RunLogModal({
         escToExit={false}
         maskClosable={false}
         closable={false}
-        style={{ width: 1000 }}
+        style={{ width: 1100 }}
       >
         <div style={{ display: 'flex' }}>
           <section style={{ width: '49.5%' }}>
@@ -39,7 +39,8 @@ export default function RunLogModal({
                 overflow: 'auto',
                 padding: 4,
                 borderRadius: 4,
-                backgroundColor: '#f3f3f3'
+                backgroundColor: '#f3f3f3',
+                whiteSpace: 'pre-wrap'
               }}
             >
               {plotResponse?.response.extra.stdout}
@@ -55,7 +56,8 @@ export default function RunLogModal({
                 overflow: 'auto',
                 padding: 4,
                 borderRadius: 4,
-                backgroundColor: '#ffe7e7'
+                backgroundColor: '#ffe7e7',
+                whiteSpace: 'pre-wrap'
               }}
             >
               {plotResponse?.response.extra.stderr}
