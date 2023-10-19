@@ -1,11 +1,36 @@
-# bio_mate
+# bio-mate
 
-[![Github Actions Status](https://github.com/github_username/bio-mate/workflows/Build/badge.svg)](https://github.com/github_username/bio-mate/actions/workflows/build.yml)
 A JupyterLab extension.
 
-## Requirements
+## 开发调试 与 打包
 
-- JupyterLab >= 4.0.0
+### 建立初始环境
+
+```bash
+# 使用 conda 建立初始环境
+conda create -n jl3-ext -y --override-channels --strict-channel-priority \
+	-c conda-forge jupyterlab=3 ipywidgets=7 nodejs=18
+```
+
+### 开发调试
+
+```bash
+# 一个 terminal 运行
+jupyter lab
+
+# 另一个 terminal 运行
+jlpm watch
+```
+
+### 打包生成 whl 文件
+
+```bash
+# 首先安装 build
+pip install build
+
+# 将会在 dist 文件夹生成 .whl package
+python -m build
+```
 
 ## Install
 
