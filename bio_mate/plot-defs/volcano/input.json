@@ -1,0 +1,36 @@
+{
+  "dataFile": {
+    "dataFilePath": "testData.csv"
+  },
+  "columns": {
+    "Symbol": "Symbol",
+    "logFC": "logFC",
+    "p_value": "p_value"
+  },
+  "general": {
+    "title": "Thf-like cells in severe COVID vs healthy patients",
+    "lab_name": "Expression level",
+    "x_name": "log2 Fold Change",
+    "y_name": "-log10 p-value",
+    "titleSize": 15
+  },
+  "plot_settings": {
+    "vline_intercepts": [-0.6, 0.6],
+    "hline_intercept": 0.000001,
+    "point_size": 1,
+    "colors": ["#00AFBB", "grey", "#bb0c00"],
+    "labels": ["Downregulated", "Not significant", "Upregulated"],
+    "ylim": [0, 250],
+    "xlim": [-10, 10],
+    "x_breaks": [-10, -8, -6, -4, -2, 0, 2, 4, 6, 8, 10],
+    "threshold": 5,
+    "line_color": "black",
+    "line_type": "dashed",
+    "h_just": 0.5,
+    "with_label": true,
+    "with_label_frame": true,
+    "remove_background_subLine": true,
+    "remove_background_mainLine": true,
+    "remove_background": false
+  }
+}

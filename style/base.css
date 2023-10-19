@@ -1,0 +1,42 @@
+/*
+    See the JupyterLab Developer Guide for useful CSS Patterns:
+
+    https://jupyterlab.readthedocs.io/en/stable/developer/css.html
+*/
+
+.mx4 {
+  margin-right: 4px;
+  margin-left: 4px;
+}
+
+.bioMateWidget {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: auto;
+}
+
+.bioMateIconWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 72px;
+  cursor: pointer;
+}
+
+.bioMateIconWrapper:hover > .bioMateIconContainer {
+  border: 1px solid transparent;
+  background: rgba(26, 27, 30, 0.05);
+}
+
+.bioMateIconContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(26, 27, 30, 0.05);
+  border-radius: 6px;
+  margin-bottom: 4px;
+  width: 36px;
+  height: 36px;
+  padding: 8px;
+}

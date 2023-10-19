@@ -1,0 +1,15 @@
+{
+  "jupyter.lab.toolbars": {
+    "Notebook": [
+      {
+        "name": "bio-mate-app",
+        "command": "bio-mate:openAppPanel"
+      }
+    ]
+  },
+  "title": "bio-mate",
+  "description": "bio-mate settings.",
+  "type": "object",
+  "properties": {},
+  "additionalProperties": false
+}

@@ -1,0 +1,25 @@
+{
+  "name": {
+    "zh_cn": "火山散点图",
+    "en": "Volcano"
+  },
+  "alias": ["DEG-Volcano"],
+  "intro": {
+    "zh_cn": "差异表达基因可视化",
+    "en": "Visualization of differentially expressed genes"
+  },
+  "src": "https://s1.imagehub.cc/images/2020/08/31/70-JC66kq-tuya.jpg",
+  "sample_img": "img.jpeg",
+  "sample_data_file": "testData.csv",
+  "output_img": "output.png",
+  "main": "plot.r",
+  "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+  "href": "/basic/volcano",
+  "tag": ["vue", "ranking"],
+  "meta": {
+    "score": 5,
+    "author": "Hiplot Team | Jack Wang & Jianfeng",
+    "releaseDate": "2019-11-22",
+    "updateDate": "2020-02-01"
+  }
+}
