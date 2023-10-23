@@ -5,6 +5,7 @@ import {
   Input,
   InputNumber,
   Message,
+  Select,
   Spin,
   Switch,
   Tabs,
@@ -420,6 +421,8 @@ function genFormItem(itemDefArr: any[]) {
         <Switch />
       ) : item.type.startsWith('number') ? (
         <InputNumber />
+      ) : item.type.startsWith('select') ? (
+        <Select options={item.options} />
       ) : item.type.startsWith('comma_number') ? (
         <Input placeholder={item.placeholder} />
       ) : undefined;

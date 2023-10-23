@@ -144,7 +144,13 @@
       "help": "请输入X轴间隔点坐标，以逗号(,)分割，例如: -10,-8,-6,-4,-2,0,2,4,6,8,10"
     },
     {
-      "type": "input",
+      "type": "select",
+      "options": [
+        { "label": "Grey", "value": "grey" },
+        { "label": "Black", "value": "black" },
+        { "label": "Red", "value": "red" },
+        { "label": "Purple", "value": "purple" }
+      ],
       "key": "line_color",
       "label": "标尺线颜色",
       "required": true,
