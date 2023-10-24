@@ -1,6 +1,8 @@
 # bio-mate
 
-A JupyterLab extension.
+A JupyterLab extension for bioinformatics.
+
+如何自定义一个biomate的生信交互式工具可查看文档：https://bio-os.gitbook.io/userguide/zui-jia-shi-jian/for-biomate-kai-fa-zhe
 
 ## 开发调试 与 打包
 
