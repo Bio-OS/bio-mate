@@ -20,6 +20,8 @@ import {
   IconQuestionCircle,
   IconUpload
 } from '@arco-design/web-react/icon';
+import { Cell } from '@jupyterlab/cells';
+import _ from 'lodash';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { BaseWidgetView } from './basewidget';
 import FileSelectModal from './modal/FileSelectModal';
@@ -38,6 +40,8 @@ export interface PlotResponse extends CommResponse {
     };
   };
 }
+
+const BIO_MATE_PLOT_CONFIG = 'bioMatePlotConfig';
 
 export default function Plot({
   type,
@@ -66,6 +70,30 @@ export default function Plot({
   const Icon = useMemo(() => {
     const app = basicPlotApps.find(item => item.id === type);
     return app?.icon || IconCommon;
+  }, []);
+
+  const initialValues = useMemo(() => {
+    return {
+      ...input,
+      dataFile: { dataFilePath: sample_data_file }
+    };
+  }, []);
+
+  useEffect(() => {
+    const cell = _.get(
+      widgetView,
+      'pWidget.parent.parent.parent.parent.parent'
+    ) as Cell | undefined;
+    const plotConfig = cell?.model.metadata.get(BIO_MATE_PLOT_CONFIG) as {
+      [key: string]: any;
+    };
+
+    const values = plotConfig || initialValues;
+
+    formDataFiles.setFieldsValue(values.dataFile);
+    formDataParams.setFieldsValue(values.columns);
+    formPlotParams.setFieldsValue(values.plot_settings);
+    formCommonParams.setFieldsValue(values.general);
   }, []);
 
   useEffect(() => {
@@ -182,10 +210,7 @@ export default function Plot({
               key="data"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form
-                initialValues={{ dataFilePath: sample_data_file }}
-                form={formDataFiles}
-              >
+              <Form form={formDataFiles}>
                 <Form.Item
                   label="数据文件"
                   field="dataFilePath"
@@ -223,27 +248,21 @@ export default function Plot({
               key="dataArg"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form initialValues={input.columns} form={formDataParams}>
-                {genFormItem(ui.columns)}
-              </Form>
+              <Form form={formDataParams}>{genFormItem(ui.columns)}</Form>
             </Tabs.TabPane>
             <Tabs.TabPane
               title="绘图参数"
               key="extra"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form initialValues={input.plot_settings} form={formPlotParams}>
-                {genFormItem(ui.plot_settings)}
-              </Form>
+              <Form form={formPlotParams}>{genFormItem(ui.plot_settings)}</Form>
             </Tabs.TabPane>
             <Tabs.TabPane
               title="通用参数"
               key="common"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form initialValues={input.general} form={formCommonParams}>
-                {genFormItem(ui.general)}
-              </Form>
+              <Form form={formCommonParams}>{genFormItem(ui.general)}</Form>
             </Tabs.TabPane>
           </Tabs>
         </main>
@@ -290,10 +309,10 @@ export default function Plot({
             <Button
               style={{ marginRight: 12 }}
               onClick={() => {
-                formDataFiles.resetFields();
-                formDataParams.resetFields();
-                formPlotParams.resetFields();
-                formCommonParams.resetFields();
+                formDataFiles.setFieldsValue(initialValues.dataFile);
+                formDataParams.setFieldsValue(initialValues.columns);
+                formPlotParams.setFieldsValue(initialValues.plot_settings);
+                formCommonParams.setFieldsValue(initialValues.general);
 
                 Message.info('已重置各项参数配置到默认值');
               }}
@@ -342,6 +361,11 @@ export default function Plot({
                 };
 
                 console.log('allValues:', allValues);
+                const cell = _.get(
+                  widgetView,
+                  'pWidget.parent.parent.parent.parent.parent'
+                ) as Cell | undefined;
+                cell?.model.metadata.set(BIO_MATE_PLOT_CONFIG, allValues);
 
                 setGenerating(true);
                 refRequest.current?.genPlot(allValues).then(val => {
