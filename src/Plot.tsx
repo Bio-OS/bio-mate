@@ -79,21 +79,40 @@ export default function Plot({
     };
   }, []);
 
+  function getCell() {
+    return _.get(widgetView, 'pWidget.parent.parent.parent.parent.parent') as
+      | Cell
+      | undefined;
+  }
+
   useEffect(() => {
-    const cell = _.get(
-      widgetView,
-      'pWidget.parent.parent.parent.parent.parent'
-    ) as Cell | undefined;
-    const plotConfig = cell?.model.metadata.get(BIO_MATE_PLOT_CONFIG) as {
-      [key: string]: any;
-    };
+    function initForm() {
+      const plotConfig = cell?.model.metadata.get(BIO_MATE_PLOT_CONFIG) as {
+        [key: string]: any;
+      };
+      const values = plotConfig || initialValues;
 
-    const values = plotConfig || initialValues;
+      formDataFiles.setFieldsValue(values.dataFile);
+      formDataParams.setFieldsValue(values.columns);
+      formPlotParams.setFieldsValue(values.plot_settings);
+      formCommonParams.setFieldsValue(values.general);
+    }
 
-    formDataFiles.setFieldsValue(values.dataFile);
-    formDataParams.setFieldsValue(values.columns);
-    formPlotParams.setFieldsValue(values.plot_settings);
-    formCommonParams.setFieldsValue(values.general);
+    let cell = getCell();
+    if (cell) {
+      initForm();
+    } else {
+      console.warn('bio-mate: try to getCell onAfterAttach', widgetView);
+      (widgetView.pWidget as any).onAfterAttach = () => {
+        cell = getCell();
+        if (cell) {
+          console.warn('bio-mate: getCell onAfterAttach [ok]', widgetView);
+        } else {
+          console.error('bio-mate: failed to getCell', widgetView);
+        }
+        initForm();
+      };
+    }
   }, []);
 
   useEffect(() => {
@@ -361,10 +380,7 @@ export default function Plot({
                 };
 
                 console.log('allValues:', allValues);
-                const cell = _.get(
-                  widgetView,
-                  'pWidget.parent.parent.parent.parent.parent'
-                ) as Cell | undefined;
+                const cell = getCell();
                 cell?.model.metadata.set(BIO_MATE_PLOT_CONFIG, allValues);
 
                 setGenerating(true);
@@ -392,7 +408,10 @@ export default function Plot({
       </section>
 
       {Boolean(imgPlot) && (
-        <Spin loading={generating} style={{ padding: '12px 0' }}>
+        <Spin
+          loading={generating}
+          style={{ padding: '12px 0', display: 'block' }}
+        >
           <img
             src={imgPlot}
             style={{
