@@ -42,6 +42,12 @@ export interface PlotResponse extends CommResponse {
 }
 
 const BIO_MATE_PLOT_CONFIG = 'bioMatePlotConfig';
+const BIO_MATE_PLOT_RESULT = 'bioMatePlotResult';
+
+interface PlotResult {
+  type: 'image';
+  data: string;
+}
 
 export default function Plot({
   type,
@@ -98,9 +104,20 @@ export default function Plot({
       formCommonParams.setFieldsValue(values.general);
     }
 
+    function initOutputImage() {
+      const result = cell?.model.metadata.get(
+        BIO_MATE_PLOT_RESULT
+      ) as unknown as PlotResult;
+
+      if (!result) return;
+
+      setImgPlot(result.data);
+    }
+
     let cell = getCell();
     if (cell) {
       initForm();
+      initOutputImage();
     } else {
       console.warn('bio-mate: try to getCell onAfterAttach', widgetView);
       (widgetView.pWidget as any).onAfterAttach = () => {
@@ -111,6 +128,7 @@ export default function Plot({
           console.error('bio-mate: failed to getCell', widgetView);
         }
         initForm();
+        initOutputImage();
       };
     }
   }, []);
@@ -392,12 +410,17 @@ export default function Plot({
                     Message.error(
                       `生成图片失败: ${val.response.msg}。请点击 查看执行日志 获取详情。`
                     );
-                    setImgPlot('');
                     return;
                   }
 
                   Message.success(`生成图片成功`);
-                  setImgPlot(val.response.result);
+
+                  const imgSrc = val.response.result;
+                  setImgPlot(imgSrc);
+                  cell?.model.metadata.set(BIO_MATE_PLOT_RESULT, {
+                    type: 'image',
+                    data: imgSrc
+                  });
                 });
               }}
             >
