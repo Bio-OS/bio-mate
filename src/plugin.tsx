@@ -5,6 +5,7 @@ import {
   LabShell
 } from '@jupyterlab/application';
 import { ICommandPalette } from '@jupyterlab/apputils';
+import { CodeCell } from '@jupyterlab/cells';
 import { INotebookTracker, NotebookPanel } from '@jupyterlab/notebook';
 import { BaseWidgetModel, BaseWidgetView } from './basewidget';
 import { BioContext } from './context';
@@ -16,7 +17,7 @@ export function activatebioMatePlugin(
   palette: ICommandPalette,
   notebookTracker: INotebookTracker,
   widgetRegistry: IJupyterWidgetRegistry,
-  layoutRestorer: ILayoutRestorer,
+  layoutRestorer: ILayoutRestorer
 ) {
   console.log(
     `JupyterLab extension bio-mate:plugin (v3) is activated! (JupyterLab: ${app.version})`
@@ -66,6 +67,9 @@ export function activatebioMatePlugin(
         kernel.requestExecute({
           code: 'import bio_mate'
         });
+
+        console.log('runBioMateCells', current_widget);
+        runBioMateCells(current_widget);
       }
     );
   });
@@ -84,4 +88,17 @@ export function activatebioMatePlugin(
   //     }
   //   })
   // );
+}
+
+function runBioMateCells(notebookPanel?: NotebookPanel) {
+  if (!notebookPanel) return;
+
+  const cell_widgets = notebookPanel.content.widgets;
+  cell_widgets.forEach(widget => {
+    if (!(widget instanceof CodeCell)) return;
+    const flag = widget.model.metadata.get('BioMate');
+    if (!flag) return;
+
+    CodeCell.execute(widget, notebookPanel.sessionContext);
+  });
 }

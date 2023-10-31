@@ -138,6 +138,8 @@ function PanelSection({
                   if (!cell) return;
                 }
 
+                cell.model.metadata.set('BioMate', true);
+
                 cell.model.sharedModel.setSource(code);
                 NotebookActions.run(
                   notebook,
