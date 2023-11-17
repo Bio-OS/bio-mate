@@ -91,6 +91,23 @@ export default function Plot({
       | undefined;
   }
 
+  const DownloadImgSrc = () => {
+    const req = new XMLHttpRequest();
+    const resourceUrl = imgPlot;
+    const donwloadName = plotInfo.meta.name.zh_cn;
+    req.open('GET', resourceUrl, true);
+    req.responseType = 'blob';
+    req.onload = function () {
+      const urls = window.URL.createObjectURL(req.response);
+      const a = document.createElement('a');
+      a.href = urls;
+      a.download = donwloadName + '.png'; // why jusr 'png', because the Rscript only output png...
+      a.click();
+    };
+    req.send();
+  };
+
+
   useEffect(() => {
     function initForm() {
       const plotConfig = cell?.model.metadata.get(BIO_MATE_PLOT_CONFIG) as {
@@ -447,6 +464,8 @@ export default function Plot({
               borderRadius: 8
             }}
           />
+          {/* the button style could be modified */}
+          <Button type='primary' style={{ marginTop: 10, marginLeft: 10 }} onClick={() => DownloadImgSrc()}>保存图片</Button>
         </Spin>
       )}
     </>
@@ -530,8 +549,8 @@ function genFormItem(itemDefArr: any[]) {
         normalize={
           item.type === 'comma_number'
             ? val => {
-                return val.split(',').map((item: string) => item.trim());
-              }
+              return val.split(',').map((item: string) => item.trim());
+            }
             : undefined
         }
       >
