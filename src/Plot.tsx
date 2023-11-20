@@ -92,19 +92,18 @@ export default function Plot({
   }
 
   const DownloadImgSrc = () => {
-    const req = new XMLHttpRequest();
-    const resourceUrl = imgPlot;
-    const donwloadName = plotInfo.meta.name.zh_cn;
-    req.open('GET', resourceUrl, true);
-    req.responseType = 'blob';
-    req.onload = function () {
-      const urls = window.URL.createObjectURL(req.response);
-      const a = document.createElement('a');
-      a.href = urls;
-      a.download = donwloadName + '.png'; // why jusr 'png', because the Rscript only output png...
-      a.click();
-    };
-    req.send();
+    const dataUrl = imgPlot; // fetch imgPlot data:url
+    const fileName = plotInfo.meta.name.zh_cn; // fetch plot name in zh_cn
+
+    const downloadlink = document.createElement('a');
+    downloadlink.href = dataUrl;
+    downloadlink.target = '_blank';
+
+    if (downloadlink.download !== undefined) {
+      downloadlink.download = fileName;
+    }
+
+    downloadlink.click();
   };
 
 
