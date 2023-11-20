@@ -91,6 +91,16 @@ export default function Plot({
       | undefined;
   }
 
+  const downloadImgSrc = () => {
+    const fileName = plotInfo.meta.name.zh_cn; // plot name in zh_cn
+
+    const downloadlink = document.createElement('a');
+    downloadlink.href = imgPlot;
+    downloadlink.download = fileName;
+
+    downloadlink.click();
+  };
+
   useEffect(() => {
     function initForm() {
       const plotConfig = cell?.model.metadata.get(BIO_MATE_PLOT_CONFIG) as {
@@ -447,6 +457,14 @@ export default function Plot({
               borderRadius: 8
             }}
           />
+          {/* the button style could be modified */}
+          <Button
+            type="primary"
+            style={{ marginTop: 10, marginLeft: 10 }}
+            onClick={() => downloadImgSrc()}
+          >
+            保存图片
+          </Button>
         </Spin>
       )}
     </>
