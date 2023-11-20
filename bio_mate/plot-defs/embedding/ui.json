@@ -1,0 +1,100 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "required": true,
+      "key": "Normalized",
+      "label": "归一化",
+      "placeholder": "请输入",
+      "help": "请输入True或者False"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "alpha",
+      "label": "透明度",
+      "placeholder": "请输入透明度值"
+    },
+    {
+      "type": "input",
+      "key": "labelcolor",
+      "label": "标签颜色",
+      "placeholder": "请输入标签颜色"
+    },
+    {
+      "type": "input",
+      "key": "bordercolor",
+      "label": "边界颜色",
+      "help": "请输入边界颜色,如black",
+      "placeholder": "请输入"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "color",
+      "label": "可视化内容",
+      "required": true,
+      "placeholder": "请输入",
+      "help": "请输入需要可视化的内容，可以是obs内存放的细胞类型，也可以是obs内存放的其他信息，如batch，也可以是var内存放的基因名称"
+    },
+    {
+      "type": "input",
+      "key": "basis",
+      "label": "低维嵌入",
+      "required": true,
+      "placeholder": "请输入类似X_umap，X_pca等存放在obsm内的信息",
+      "help": "细胞的低维表示，除了X_umap外还有X_tsne等"
+    },
+    {
+      "type": "input",
+      "key": "cmap",
+      "label": "cmap颜色类型",
+      "placeholder": "请输入类似Reds等颜色类型",
+      "help": "请输入cmap颜色类型,例如: Reds"
+    },
+    {
+      "type": "input",
+      "key": "fontsize",
+      "label": "字体大小",
+      "placeholder": "请输入字体大小",
+      "help": "请输入字体大小"
+    },
+    {
+      "type": "input.8",
+      "key": "palette",
+      "label": "颜色组的数量配比",
+      "placeholder": "请输入颜色配比数量",
+      "help": "分别是红绿橙蓝，要求分别输入数量"
+    }
+  ],
+  "extra": {
+
+  }
+}
