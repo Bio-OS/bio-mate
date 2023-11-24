@@ -1,0 +1,30 @@
+{
+  "dataFile":{
+    "dataFilePath":"/Users/fernandozeng/Downloads/10X43_1.h5ad"
+    
+  },
+  "columns": {
+    "title": "SCSA Annotation",
+    "model_path":"/Users/fernandozeng/Desktop/Pyomic/temp/pySCSA_2023_v2_plus.db",
+    "save_name":"adata_anno.h5ad"
+  },
+  "general": {
+    "mito_perc":0.2,
+    "nUMIs":500,
+    "detected_genes":250,
+    "n_HVGs":3000,
+    "n_neighbors":15,
+    "n_pcs":50,
+    "resolution":1,
+    "foldchange":1.5,
+    "pvalue":0.01,
+    "celltype":"normal",
+    "target":"cellmarker",
+    "tissue":"All"
+  },
+  "plot_settings": {
+    "basis":"X_umap",
+    "cmap":"Reds",
+    "fontsize":12
+  }
+}

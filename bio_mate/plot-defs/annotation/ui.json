@@ -1,0 +1,165 @@
+
+
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "required": true,
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入",
+      "help": "请输入绘图标题"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "model_path",
+      "label": "模型路径",
+      "placeholder": "请输入",
+      "help": "请输入模型路径，模型可使用omicverse.single.pySCSA自动下载"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "save_name",
+      "label": "文件保存名",
+      "placeholder": "请输入",
+      "help": "请输入自动注释结果保存名"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "mito_perc",
+      "label": "最大线粒体比例",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "nUMIs",
+      "label": "每个细胞最小UMI数",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "detected_genes",
+      "label": "每个最小基因数",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "n_HVGs",
+      "label": "高可变基因数",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "n_neighbors",
+      "label": "邻域数",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "n_pcs",
+      "label": "计算PCA数",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "resolution",
+      "label": "无监督聚类分辨率",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "foldchange",
+      "label": "簇差异基因倍数",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "pvalue",
+      "label": "簇差异基因p值",
+      "placeholder": "请输入",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "celltype",
+      "label": "需要自动注释的细胞类型",
+      "placeholder": "请输入cancer或normal",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "celltype",
+      "label": "自动注释使用的数据库",
+      "placeholder": "请输入cellmarker或cancersea",
+      "required": true
+    },
+    {
+      "type": "input",
+      "key": "tissue",
+      "label": "自动注释使用的组织",
+      "placeholder": "请输入tissue",
+      "required": true
+    }
+
+
+    
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "basis",
+      "label": "低维嵌入",
+      "required": true,
+      "placeholder": "请输入类似X_umap，X_pca等存放在obsm内的信息",
+      "help": "细胞的低维表示，除了X_umap外还有X_tsne等"
+    },
+    {
+      "type": "input",
+      "key": "cmap",
+      "label": "cmap颜色类型",
+      "placeholder": "请输入类似Reds等颜色类型",
+      "help": "请输入cmap颜色类型,例如: Reds"
+    },
+    {
+      "type": "input",
+      "key": "fontsize",
+      "label": "字体大小",
+      "placeholder": "请输入字体大小",
+      "help": "请输入字体大小"
+    }
+  ],
+  "extra": {
+
+  }
+}

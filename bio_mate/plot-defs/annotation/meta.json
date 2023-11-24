@@ -1,18 +1,18 @@
 {
   "name": {
-    "zh_cn": "嵌入图",
-    "en": "Embedding Diagram"
+    "zh_cn": "细胞类型自动注释",
+    "en": "Annotation of cell types"
   },
-  "alias": ["Embedding"],
+  "alias": ["Annotation"],
   "intro": {
-    "zh_cn": "嵌入图是一种观察细胞低维可视化的效果图",
-    "en": "The embedding map is an effect map for observing low-dimensional visualisations of cells"
+    "zh_cn": "全自动注释细胞类型",
+    "en": "Annotation of cell types"
   },
   "src": "数据形如：AnnData object with n_obs × n_vars = 2930 × 13913",
-  "sample_img": "img.jpg",
+  "sample_img": "img.jpeg",
   "sample_data_file": "adata.h5ad",
   "output_img": "output.png",
-  "main": "embedding.py",
+  "main": "preprocess.py",
   "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
   "href": "./",
   "tag": ["vue", "ranking"],
