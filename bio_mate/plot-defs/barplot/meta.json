@@ -1,0 +1,25 @@
+{
+  "name": {
+    "zh_cn": "柱状图",
+    "en": "Box Diagram"
+  },
+  "alias": ["barplot"],
+  "intro": {
+    "zh_cn": "柱状图",
+    "en": "barplot"
+  },
+  "src": "数据文件，支持csv，tsv，txt，xlsx",
+  "sample_img": "img.png",
+  "sample_data_file": "data.csv",
+  "output_img": "output.png",
+  "main": "barplot.py",
+  "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
+  "href": "./",
+  "tag": ["vue", "ranking"],
+  "meta": {
+    "score": 5,
+    "author": "Zehua Zeng",
+    "releaseDate": "2023-11-20",
+    "updateDate": "2023-11-20"
+  }
+}
