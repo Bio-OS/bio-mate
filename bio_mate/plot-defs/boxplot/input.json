@@ -1,0 +1,22 @@
+{
+  "dataFile":{
+    "dataFilePath":"/Users/fernandozeng/Downloads/10X43_1.h5ad"
+  },
+  "columns": {
+    "x": "day",
+    "y":"total_bill",
+    "hue":"smoker"
+  },
+  "general": {
+    "title": "Box Diagram",
+    "bordercolor":"black",
+    "alpha": 0.8,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "xlabels":"day",
+    "ylabels":"total_bill",
+    "fontsize":12,
+    "palette":"Red"
+  }
+}

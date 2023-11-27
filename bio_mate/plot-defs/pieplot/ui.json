@@ -1,0 +1,111 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "key": "Group",
+      "label": "分组",
+      "required": true,
+      "placeholder": "饼图的分组"
+    },
+    {
+      "type": "input",
+      "key": "Value",
+      "label": "比例",
+      "required": true,
+      "placeholder": "如果输入的不是比例会自动计算占比"
+    },
+    {
+      "type": "input",
+      "key": "Explode",
+      "label": "突出显示",
+      "required": true,
+      "placeholder": "全0代表全部都不突出显示"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "alpha",
+      "label": "透明度",
+      "placeholder": "请输入透明度值"
+    },
+    {
+      "type": "input",
+      "key": "labelcolor",
+      "label": "标签颜色",
+      "placeholder": "请输入标签颜色"
+    },
+    {
+      "type": "input",
+      "key": "bordercolor",
+      "label": "边界颜色",
+      "help": "请输入边界颜色,如black",
+      "placeholder": "请输入"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "color",
+      "label": "颜色",
+      "placeholder": "请输入颜色名red,orange,blue或green",
+      "help": "如需自定义颜色请用,做分隔符，如'#00FF00','#0000FF'"
+    },
+    {
+      "type": "input",
+      "key": "autopct",
+      "label": "占比格式",
+      "placeholder": "请输入占比格式，默认自动autopct",
+      "help": "占比格式"
+    },
+    {
+      "type": "input",
+      "key": "shadow",
+      "label": "阴影显示",
+      "placeholder": "是否显示阴影",
+      "help": "请输入True或False"
+    },
+    {
+      "type": "input",
+      "key": "startangle",
+      "label": "第一个饼的开始角度",
+      "placeholder": "第一个饼的开始角度，默认90度",
+      "help": "第一个饼的开始角度，默认90度"
+    },
+    {
+      "type": "input",
+      "key": "fontsize",
+      "label": "字体大小",
+      "placeholder": "请输入字体大小",
+      "help": "请输入字体大小"
+    }
+  ],
+  "extra": {
+
+  }
+}

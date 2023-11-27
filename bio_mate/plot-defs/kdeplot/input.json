@@ -1,0 +1,21 @@
+{
+  "dataFile":{
+    "dataFilePath":"data.csv"
+  },
+  "columns": {
+    "x": "total_bill"
+  },
+  "general": {
+    "title": "Kde Diagram",
+    "bordercolor":"black",
+    "alpha": 0.8,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "xlabels":"Total Bill",
+    "ylabels":"Density",
+    "fontsize":12,
+    "color":"#F0C3C3",
+    "log_scale":"False"
+  }
+}

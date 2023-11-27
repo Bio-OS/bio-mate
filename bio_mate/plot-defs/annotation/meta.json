@@ -12,7 +12,7 @@
   "sample_img": "img.jpeg",
   "sample_data_file": "adata.h5ad",
   "output_img": "output.png",
-  "main": "preprocess.py",
+  "main": "annotation.py",
   "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
   "href": "./",
   "tag": ["vue", "ranking"],

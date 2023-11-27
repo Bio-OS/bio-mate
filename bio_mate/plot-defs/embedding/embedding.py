@@ -1,3 +1,11 @@
+"""
+embedding.py
+
+单细胞降维可视化
+
+Author: Zehua Zeng
+Mail: starlitnightly@163.com
+"""
 import subprocess
 import sys
 

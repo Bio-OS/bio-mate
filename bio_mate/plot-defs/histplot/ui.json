@@ -1,0 +1,111 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "key": "x",
+      "label": "面积图横坐标",
+      "required": true,
+      "placeholder": "请输入数据文件中面积图横坐标列名"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "alpha",
+      "label": "透明度",
+      "placeholder": "请输入透明度值"
+    },
+    {
+      "type": "input",
+      "key": "labelcolor",
+      "label": "标签颜色",
+      "placeholder": "请输入标签颜色"
+    },
+    {
+      "type": "input",
+      "key": "bordercolor",
+      "label": "边界颜色",
+      "help": "请输入边界颜色,如black",
+      "placeholder": "请输入"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "xlabels",
+      "label": "横坐标名",
+      "placeholder": "请输入横坐标名",
+      "help": "请输入横坐标名"
+    },
+    {
+      "type": "input",
+      "key": "ylabels",
+      "label": "纵坐标名",
+      "placeholder": "请输入纵坐标名",
+      "help": "请输入纵坐标名"
+    },
+    {
+      "type": "input",
+      "key": "bins",
+      "label": "直方图数",
+      "placeholder": "请输入直方图数，默认为10",
+      "help": "请输入直方图数，默认为10"
+    },
+    {
+      "type": "input",
+      "key": "fontsize",
+      "label": "字体大小",
+      "placeholder": "请输入字体大小",
+      "help": "请输入字体大小"
+    },
+    {
+      "type": "input",
+      "key": "color",
+      "label": "直方图颜色",
+      "placeholder": "请输入直方图颜色，如#1f577b",
+      "help": "请输入直方图颜色"
+    },
+    {
+      "type": "input",
+      "key": "log_scale",
+      "label": "纵坐标对数化",
+      "placeholder": "纵坐标是否对数化，True或者False",
+      "help": "纵坐标对数化"
+    },
+    {
+      "type": "input",
+      "key": "histtype",
+      "label": "直方图类型",
+      "placeholder": "可选bar,step",
+      "help": "直方图类型"
+    }
+  ],
+  "extra": {
+
+  }
+}

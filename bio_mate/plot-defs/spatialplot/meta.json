@@ -1,0 +1,25 @@
+{
+  "name": {
+    "zh_cn": "空间转录组可视化",
+    "en": "Spatial Diagram"
+  },
+  "alias": ["lineplot"],
+  "intro": {
+    "zh_cn": "空间转录组可视化",
+    "en": "spatialplot"
+  },
+  "src": "数据文件，支持h5ad格式",
+  "sample_img": "img.png",
+  "sample_data_file": "adata_vis.h5ad",
+  "output_img": "output.png",
+  "main": "spatialplot.py",
+  "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
+  "href": "./",
+  "tag": ["vue", "ranking"],
+  "meta": {
+    "score": 5,
+    "author": "Zehua Zeng",
+    "releaseDate": "2023-11-20",
+    "updateDate": "2023-11-20"
+  }
+}

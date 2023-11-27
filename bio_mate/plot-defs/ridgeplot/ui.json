@@ -1,0 +1,111 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "key": "x",
+      "label": "岭图的数值",
+      "required": true,
+      "placeholder": "岭图的数值"
+    },
+    {
+      "type": "input",
+      "key": "y",
+      "label": "岭图的分组",
+      "required": true,
+      "placeholder": "岭图的分组"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "alpha",
+      "label": "透明度",
+      "placeholder": "请输入透明度值"
+    },
+    {
+      "type": "input",
+      "key": "labelcolor",
+      "label": "标签颜色",
+      "placeholder": "请输入标签颜色"
+    },
+    {
+      "type": "input",
+      "key": "bordercolor",
+      "label": "边界颜色",
+      "help": "请输入边界颜色,如black",
+      "placeholder": "请输入"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "xlabels",
+      "label": "横坐标名",
+      "placeholder": "请输入横坐标名",
+      "help": "请输入横坐标名"
+    },
+    {
+      "type": "input",
+      "key": "ylabels",
+      "label": "纵坐标名",
+      "placeholder": "请输入纵坐标名",
+      "help": "请输入纵坐标名"
+    },
+    {
+      "type": "input",
+      "key": "color",
+      "label": "颜色",
+      "placeholder": "请输入颜色名red,orange,blue或green",
+      "help": "如需自定义颜色请用,做分隔符，如'#00FF00','#0000FF'"
+    },
+    {
+      "type": "input",
+      "key": "figwidth",
+      "label": "图片宽度",
+      "placeholder": "图片宽度，默认为4",
+      "help": "图片宽度"
+    },
+    {
+      "type": "input",
+      "key": "figheight",
+      "label": "图片高度",
+      "placeholder": "图片高度，默认为3",
+      "help": "图片高度"
+    },
+    {
+      "type": "input",
+      "key": "fontsize",
+      "label": "字体大小",
+      "placeholder": "请输入字体大小",
+      "help": "请输入字体大小"
+    }
+  ],
+  "extra": {
+
+  }
+}

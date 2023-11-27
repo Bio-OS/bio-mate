@@ -119,7 +119,7 @@
     },
     {
       "type": "input",
-      "key": "celltype",
+      "key": "target",
       "label": "自动注释使用的数据库",
       "placeholder": "请输入cellmarker或cancersea",
       "required": true

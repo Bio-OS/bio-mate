@@ -1,0 +1,21 @@
+{
+  "dataFile":{
+    "dataFilePath":"data.csv"
+  },
+  "columns": {
+    "group": "group"
+  },
+  "general": {
+    "title": "Radar Diagram",
+    "bordercolor":"black",
+    "alpha": 0.1,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "color":"red",
+    "linewidth":2.5,
+    "fontsize":12,
+    "figwidth":4, 
+    "figheight":4
+  }
+}

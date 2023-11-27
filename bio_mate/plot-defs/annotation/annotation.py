@@ -1,3 +1,13 @@
+"""
+annotation.py
+
+绘制核密度图
+
+Author: Zehua Zeng
+Mail: starlitnightly@163.com
+
+"""
+
 import subprocess
 import sys
 import omicverse as ov
@@ -63,6 +73,17 @@ blue_color=['#347862','#6BBBA0','#81C0DD','#3E8CB1','#88C8D2','#52B3AD','#265B58
 
 
 def preprocess_scrna(config_file, output_file):
+    """
+    scRNA-seq自动注释函数
+
+    Parameters
+    ----------
+    config_file: str
+        配置文件路径
+    output_file: str
+        输出文件路径
+    
+    """
     # 读取配置文件
     with open(config_file, 'r') as json_file:
         config = json.load(json_file)
@@ -92,24 +113,28 @@ def preprocess_scrna(config_file, output_file):
 
     
 
-    # data = 从数据文件中读取数据的逻辑，例如使用pandas读取CSV文件
+    #读取数据
     adata=sc.read(data_file_path)
+    #去重
     adata.var_names_make_unique()
     adata.obs_names_make_unique()
+    #质控
     adata=ov.pp.qc(adata,
               tresh={'mito_perc': mito_perc, 'nUMIs': nUMIs, 'detected_genes': detected_genes})
-
+    #标准化
     adata=ov.pp.preprocess(adata,mode='shiftlog|pearson',n_HVGs=n_HVGs,)
+    #保留高可变基因
     adata.raw = adata
     adata = adata[:, adata.var.highly_variable_features]
+    #scale和主成分分析
     ov.pp.scale(adata)
     ov.pp.pca(adata,layer='scaled',n_pcs=n_pcs)
-
+    #聚类和降维
     sc.pp.neighbors(adata, n_neighbors=n_neighbors, n_pcs=n_pcs,
                use_rep='scaled|original|X_pca')
     ov.utils.cluster(adata,method='leiden',resolution=resolution)
     sc.tl.umap(adata)
-
+    #自动注释
     scsa=ov.single.pySCSA(adata=adata,
                       foldchange=foldchange,
                       pvalue=pvalue,
@@ -121,9 +146,9 @@ def preprocess_scrna(config_file, output_file):
     anno=scsa.cell_anno(clustertype='leiden',
                cluster='all',rank_rep=True)
     scsa.cell_auto_anno(adata,key='scsa_celltype_cellmarker')
-
+    #gpu加速的降维可视化
     adata.obsm["X_mde"] = ov.utils.mde(adata.obsm["scaled|original|X_pca"])
-
+    #绘图
     import matplotlib.pyplot as plt
     #可视化`scsa_celltype_cellmarker`
     fig, ax = plt.subplots(figsize=(4,4))
