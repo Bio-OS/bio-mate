@@ -1,0 +1,26 @@
+{
+    "dataFile": {
+      "dataFilePath": "YW-Breathe_remove_host_profile.txt"
+    },
+    "columns": {
+      "type": "Bacteria",
+       "cladename":"clade_name"
+    },
+    "general": {
+      "title": "Bacteria"
+    },
+    "plot_settings": {
+      "cluster_cols":false,
+      "cluster_rows":false,
+      "annoation":true,
+      "cellheight":50,
+      "cellwidth":30,
+      "display_numbers":true,
+      "number_color":"black",
+      "fontsize":10,
+      "color_type":"RdYlBu",
+      "width":5,
+      "height":10,
+      "angle_col":315
+    }
+  }

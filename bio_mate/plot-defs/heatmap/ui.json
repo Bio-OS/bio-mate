@@ -1,0 +1,195 @@
+{
+    "data": {
+      "datTable": {
+        "type": "hiplot-textarea",
+        "required": true,
+        "label": "messages.common.dataTable"
+      }
+    },
+    "dataArg": {
+      "datTable": [
+        {
+          "label": "clade_name"
+        }     
+      ]
+    },
+    "columns": [
+      {
+        "type": "input",
+        "required": true,
+        "key": "cladename",
+        "label": "clade_name",
+        "placeholder": "请输入",
+        "help": "请输入数据文件中分类(如物种)列名称"
+      }
+    ],
+    "general": [                             
+     {
+        "type": "input",
+        "key": "title",
+        "label": "标题",
+        "placeholder": "请输入标题"
+      }
+    ],
+    "plot_settings": [
+        {
+            "type": "select",
+            "options": [
+             { "label": "Yes", "value": true },
+             { "label": "No", "value": false }
+               ],
+             "key": "cluster_cols",
+             "label": "列聚类",
+             "required": true,
+             "placeholder": "请选择列是否聚类"
+         },
+         {
+           "type": "select",
+           "options": [
+            { "label": "Yes", "value": true },
+            { "label": "No", "value": false }
+              ],
+            "key": "cluster_rows",
+            "label": "行聚类",
+            "required": true,
+            "placeholder": "请选择行是否聚类"
+         },  
+         {
+           "type": "select",
+           "options": [
+            { "label": "Yes", "value": true },
+            { "label": "No", "value": false }
+              ],
+            "key": "annoation",
+            "label": "注释",
+            "required": true,
+            "placeholder": "请选择是否添加注释（如物种）"
+         },
+         {
+            "type": "number",
+            "key": "cellheight",
+            "label": "方块高度",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请输入方块高度，例如:50"
+          },
+          {
+            "type": "number",
+            "key": "cellwidth",
+            "label": "方块宽度",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请输入方块宽度，例如:30"
+          },
+          {
+            "type": "select",
+            "options": [
+             { "label": "Yes", "value": true },
+             { "label": "No", "value": false }
+               ],
+             "key": "display_numbers",
+             "label": "显示数值",
+             "required": true,
+             "placeholder": "请选择是否显示具体数值"
+          },
+          {
+            "type": "input",
+            "key": "number_color",
+            "label": "数值颜色",
+            "placeholder": "请输入数值颜色，如黑色"
+          },
+          {
+            "type": "number",
+            "key": "fontsize",
+            "label": "字体大小",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请输入字体大小，如10"
+          },
+          {
+            "type": "select",
+            "options": [
+              { "label": "0", "value": 0 },
+              { "label": "45", "value": 45 },
+              { "label": "90", "value": 90 },
+              { "label": "270", "value": 270 },
+              { "label": "315", "value": 315 }
+            ],
+            "key": "angle_col",
+            "label": "字体倾斜角度",
+            "required": true,
+            "placeholder": "请选择字体倾斜角度"
+          },
+          {
+            "type": "select",
+            "options": [
+              { "label": "Accent", "value": "Accent" },
+              { "label": "Blues", "value": "Blues" },
+              { "label": "BrBG", "value": "BrBG" },
+              { "label": "BuGn", "value": "BuGn" },
+              { "label": "BuPu", "value": "BuPu" },
+              { "label": "GnBu", "value": "GnBu" },
+              { "label": "Greens", "value": "Greens" },
+              { "label": "Greys", "value": "Greys" },
+              { "label": "OrRd", "value": "OrRd" },
+              { "label": "Oranges", "value": "Oranges" },
+              { "label": "RdYlGn", "value": "RdYlGn" },
+              { "label": "RdYlBu", "value": "RdYlBu" }
+            ],
+            "key": "color_type",
+            "label": "颜色方案",
+            "required": true,
+            "placeholder": "请输入"
+          },            
+          {
+            "type": "number",
+            "key": "width",
+            "label": "图片宽度",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请输入图片宽度"
+          },
+          {
+            "type": "number",
+            "key": "height",
+            "label": "图片高度",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请输入图片高度"
+          }
+    ],
+    "extra": {
+      "p_cutoff": {
+        "type": "combobox",
+        "label": "messages.basic.volcano.pCutoff",
+        "items": [0.1, 0.05, 0.01, 0.001, 0.0001, 1e-5, 1e-6, 1e-7, 1e-8],
+        "class": "col-12 col-md-6"
+      },
+      "fc_cutoff": {
+        "type": "combobox",
+        "label": "messages.basic.volcano.fcCutoff",
+        "items": [0.5, 1, 2, 3, 4, 5],
+        "class": "col-12 col-md-6"
+      },
+      "show_top": {
+        "type": "switch",
+        "label": "messages.basic.volcano.showTop",
+        "class": "col-12"
+      },
+      "show_genes_num": {
+        "type": "slider",
+        "label": "messages.basic.volcano.show_genes_num",
+        "class": "col-12 col-md-6",
+        "if": "show_top",
+        "max": 500
+      },
+      "selected_genes": {
+        "type": "combobox",
+        "multiple": true,
+        "label": "messages.basic.volcano.selected_genes",
+        "class": "col-12 col-md-6",
+        "if": "show_top",
+        "items_func": "this.selectCols('datTable', 0)"
+      }
+    }
+  }

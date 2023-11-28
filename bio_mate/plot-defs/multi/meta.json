@@ -1,0 +1,25 @@
+{
+    "name": {
+      "zh_cn": "多图选择",
+      "en": "multi-plot"
+    },
+    "alias": ["SDY-multiplot"],
+    "intro": {
+      "zh_cn": "本软件集成了箱线图、小提琴图、箱线+小提琴图、密度图、山岭图等5种图形",
+      "en": "multi-plot"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "testData_multi.csv",
+    "output_img": "output.png",
+    "main": "Biomate_muti.R",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/muti",
+    "tag": ["vue", "ranking"],
+    "meta": {
+      "score": 5,
+      "author": "CAU | Dongyan Shao",
+      "releaseDate": "2023-11-28",
+      "updateDate": "2023-11-28"
+    }
+  }

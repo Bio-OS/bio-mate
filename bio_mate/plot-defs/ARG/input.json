@@ -1,0 +1,47 @@
+{
+    "dataFile": {
+      "dataFilePath": "testpath.csv"
+    },
+    "columns": {
+      "path": "path",
+      "ref":"ref"
+    },
+    "general": {
+      "title": "ARG_Tree",
+      "ref": false,
+      "threads":1,
+      "treescaletype":"xasis",
+      "tiplab":true,
+      "heatmap":true,
+      "barplot":true
+    },
+    "plot_settings": {
+      "layout":"rectangular",
+      "branchlength":"1",
+      "treesize":1,
+      "treecolor":"black",
+      "treelinetype":"solid",
+      "star_size":2.5,
+      "starshape":15,
+      "starstroke":0.000001,
+      "staroffset":0.3,
+      "starpwidth":0.8, 
+      "starlinecolor":"white",
+      "starfillcolor":"#709AE0",
+      "startextsize":2.5,
+      "startextangle":-45,
+      "startextvjust":0,
+      "startexthjust":0.3,
+      "startextlinesize":0,
+      "barpwidth":0.4, 
+      "baroffset":0.1,
+      "barwidth":0.8,
+      "barcolor":"#E64B35FF",
+      "scalefontsize":2,
+      "scalelinesize":1,
+      "scaleoffset":0.3,
+      "tiplabsize":1.8,
+      "width":8,
+      "height":6
+    }
+  }

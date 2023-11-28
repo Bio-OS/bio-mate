@@ -1,0 +1,204 @@
+{
+    "data": {
+      "datTable": {
+        "type": "hiplot-textarea",
+        "required": true,
+        "label": "messages.common.dataTable"
+      }
+    },
+    "dataArg": {
+      "datTable": [
+        {
+          "label": "group"
+        },
+        {
+          "label": "value"
+        }     
+      ]
+    },
+    "columns": [
+      {
+        "type": "input",
+        "required": true,
+        "key": "group",
+        "label": "group",
+        "placeholder": "请输入",
+        "help": "请输入数据文件中类别列名称"
+      },
+      {
+        "type": "input",
+        "required": true,
+        "key": "value",
+        "label": "value",
+        "placeholder": "请输入",
+        "help": "请输入数据文件中包含数值的列名称"
+      }
+    ],
+    "general": [
+        
+      {
+        "type": "input",
+        "key": "title",
+        "label": "标题",
+        "placeholder": "请输入标题"
+      },
+      {
+        "type": "input",
+        "key": "x_name",
+        "label": "X轴名称",
+        "placeholder": "请输入X轴名称"
+      },
+      {
+        "type": "input",
+        "key": "y_name",
+        "label": "Y轴名称",
+        "placeholder": "请输入Y轴名称"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Box", "value": "box" },
+          { "label": "violin", "value": "violin" },
+          { "label": "boxviolin", "value": "boxviolin" },
+          { "label": "density", "value": "density" },
+          { "label":"ridges","value":"ridges"}
+        ],
+        "key": "plottype",
+        "label": "图形样式",
+        "required": true,
+        "placeholder": "请选择想要的图形样式"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": true },
+          { "label": "No", "value": false }
+        ],
+        "key": "pairwisecompare",
+        "label": "统计学比较",
+        "required": true,
+        "placeholder": "请选择是否进行统计学比较"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "仅展示显著", "value": "significant" },
+          { "label": "仅展示不显著", "value": "non-significant" },
+          { "label": "全部展示", "value": "all" }         
+        ],
+        "key": "pairwisedisplay",
+        "label": "显著性展示",
+        "required": true,
+        "placeholder": "请选择显著性展示方式"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "parametric", "value": "parametric" },
+          { "label": "nonparametric", "value": "non-nonparametric" },
+          { "label": "bayes", "value": "bayes" },
+          { "label": "robust", "value": "robust" }         
+        ],
+        "key": "pairwisetype",
+        "label": "统计学方法",
+        "required": true,
+        "placeholder": "请选择统计学方法"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "BH", "value": "BH" },
+          { "label": "bonferroni", "value": "bonferroni" },
+          { "label": "BY", "value": "BY" },
+          { "label": "fdr", "value": "fdr" },
+          { "label": "holm", "value": "holm" },         
+          { "label": "none", "value": "none" }        
+        ],
+        "key": "pairwiseadjustmethod",
+        "label": "统计学校正方法",
+        "required": true,
+        "placeholder": "请选择统计学校正方法"
+      }
+    ],
+    "plot_settings": [
+     {
+        "type": "select",
+        "options": [
+          { "label": "AAAS", "value": "AAAS" },
+          { "label": "igv", "value": "igv" },
+          { "label": "jama", "value": "jama" },
+          { "label": "lancet", "value": "lancet" },
+          { "label": "jco", "value": "jco" },
+          { "label": "NPG", "value": "NPG" },
+          { "label": "Your order", "value": "Your order" }
+        ],
+        "key": "colortype",
+        "label": "预设颜色",
+        "required": true,
+        "placeholder": "请输入"
+      },
+      {
+        "type": "input",
+        "key": "color_you_choose",
+        "label": "自选颜色",
+        "placeholder": "请输入自选颜色，颜色之间用,分隔"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": true },
+          { "label": "No", "value": false }
+        ],
+        "key": "results_subtitle",
+        "label": "副标题-统计学",
+        "required": true,
+        "placeholder": "请选择是否显示带有统计学信息的副标题"
+      },
+      {
+        "type": "number",
+        "key": "signiftextsize",
+        "label": "显著性-字体大小",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入显著性差异的字体大小"
+      },
+      {
+        "type": "number",
+        "key": "signiftiplength",
+        "label": "显著性-线粗细",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入显著性差异线的粗细"
+      }, 
+      {
+        "type": "select",
+        "options": [
+          { "label": "stats", "value": "theme_ggstatsplot" },
+          { "label": "bw", "value": "theme_bw" },
+          { "label": "classic", "value": "theme_classic" }
+        ],
+        "key": "theme",
+        "label": "主题选择",
+        "required": true,
+        "placeholder": "请选择主题"
+      },
+      {
+        "type": "number",
+        "key": "width",
+        "label": "图像宽度",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入阈值，例如: 8"
+      },
+      {
+        "type": "number",
+        "key": "height",
+        "label": "图像高度",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入阈值，例如: 6"
+      }
+    ],
+    "extra": {
+    }
+  }

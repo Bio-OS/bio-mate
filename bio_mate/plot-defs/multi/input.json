@@ -1,0 +1,30 @@
+{
+    "dataFile": {
+      "dataFilePath": "testData_multi.csv"
+    },
+    "columns": {
+      "group": "Species",
+      "value":"Sepal.Length"
+    },
+    "general": {
+      "title": "",
+      "x_name":"group",
+      "y_name":"value",
+      "pairwisecompare":true,
+      "pairwisedisplay":"significant",
+      "pairwisetype":"parametric",
+      "pairwiseadjustmethod":"BH",
+      "plottype":"boxviolin"
+
+    },
+    "plot_settings": {
+      "colortype":"AAAS",
+      "color_you_choose":"",
+      "results_subtitle":true,
+      "signiftextsize":4,
+      "signiftiplength":0.01,
+      "theme":"theme_ggstatsplot",
+      "width":10,
+      "height":6
+    }
+  }
