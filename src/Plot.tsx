@@ -91,21 +91,15 @@ export default function Plot({
       | undefined;
   }
 
-  const DownloadImgSrc = () => {
-    const dataUrl = imgPlot; // fetch imgPlot data:url
-    const fileName = plotInfo.meta.name.zh_cn; // fetch plot name in zh_cn
+  const downloadImgSrc = () => {
+    const fileName = plotInfo.meta.name.zh_cn; // plot name in zh_cn
 
     const downloadlink = document.createElement('a');
-    downloadlink.href = dataUrl;
-    downloadlink.target = '_blank';
-
-    if (downloadlink.download !== undefined) {
-      downloadlink.download = fileName;
-    }
+    downloadlink.href = imgPlot;
+    downloadlink.download = fileName;
 
     downloadlink.click();
   };
-
 
   useEffect(() => {
     function initForm() {
@@ -464,7 +458,13 @@ export default function Plot({
             }}
           />
           {/* the button style could be modified */}
-          <Button type='primary' style={{ marginTop: 10, marginLeft: 10 }} onClick={() => DownloadImgSrc()}>保存图片</Button>
+          <Button
+            type="primary"
+            style={{ marginTop: 10, marginLeft: 10 }}
+            onClick={() => downloadImgSrc()}
+          >
+            保存图片
+          </Button>
         </Spin>
       )}
     </>
@@ -548,8 +548,8 @@ function genFormItem(itemDefArr: any[]) {
         normalize={
           item.type === 'comma_number'
             ? val => {
-              return val.split(',').map((item: string) => item.trim());
-            }
+                return val.split(',').map((item: string) => item.trim());
+              }
             : undefined
         }
       >
