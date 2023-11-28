@@ -1,0 +1,39 @@
+{
+  "dataFile":{
+    "dataFilePath":"testData.csv"
+  },
+  "columns": {
+    "Value": "Value",
+    "platform": "platform",
+    "Group": "Group"
+  },
+  "general": {
+    "Title": "Mul-Var Value Density Distribution Plot",
+    "BaseLabelSize": 18,
+    "BaseRectSize":0.1, 
+    "plotwidth":2000,
+    "plotheight":1800,
+    "PlotColor":["#7189BF", "#DF7599", "#FFC785"],
+    "pictureRes":300,
+    "titlehjust":0.5
+  },
+  "plot_settings": {
+    "trim":true,
+    "position_dodge":0.77,
+    "Legend_SHOW":false,
+    "expand":[0.1, 0.1],
+    "boxplotSize":1,
+    "boxplotWidth":0.2,
+    "add_signif":true,
+    "SiglabelSize":7,
+    "testmethod":"t.test",
+    "step_Size":0.2,
+    "SiglineSize":0.5,
+    "legendPos":"top",
+    "legendSize":1.2,
+    "linealpha":0.3,
+    "add_line":false,
+    "legendnrows":1,
+    "legendtitle_position":"top"
+  }
+}

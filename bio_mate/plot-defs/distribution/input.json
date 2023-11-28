@@ -1,0 +1,25 @@
+{
+  "dataFile":{
+    "dataFilePath":"testData.csv"
+  },
+  "columns": {
+    "Value": "Value",
+    "platform": "platform"
+  },
+  "general": {
+    "Title": "Mul-Var Value Density Distribution Plot",
+    "PlotColor":"blue",
+    "plotwidth":2000,
+    "plotheight":1600,
+    "pictureRes":300,
+    "BaseLabelSize": 18,
+    "BaseLineSize":0.1,
+    "BaseRectSize":0.1,
+    "titlehjust":0.5
+  },
+  "plot_settings": {
+    "CurveLineSize": 2,
+    "nrow": 2,
+    "scales":"free"
+  }
+}

@@ -1,0 +1,27 @@
+{
+    "dataFile": {
+        "dataFilePath": "testData.csv"
+    },
+    "columns": {
+        "value": "value",
+        "type": "type"
+    },
+    "general": {
+        "Title": "Circle Pie Plot",
+        "PlotColor": ["#7eaac9", "#ffafaf"],
+        "BaseLabelSize": 18,
+        "legendSize": 1,
+        "plotwidth": 1600,
+        "plotheight": 1200,
+        "pictureRes": 300,
+        "titlehjust": 0.5
+    },
+    "plot_settings": {
+        "barwidths": 0.5,
+        "LabelSize": 4,
+        "Expand": [0.95, 0.95],
+        "LegendPos": [0.5, 0.5],
+        "Legendcols": 1,
+        "labelcolor": "black"
+    }
+}
