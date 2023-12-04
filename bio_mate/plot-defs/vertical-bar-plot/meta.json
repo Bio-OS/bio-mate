@@ -1,0 +1,25 @@
+{
+    "name": {
+        "zh_cn": "柱状图",
+        "en": "Vertical Bar Plot"
+    },
+    "alias": ["ver-bar-plot"],
+    "intro": {
+        "zh_cn": "柱状图主要用于多个分类间的数据（大小、数值）的对比",
+        "en": "comparison of data (size, value) between multiple classifications"
+    },
+    "src": "",
+    "sample_img": "ver-bar-plot-example.png",
+    "sample_data_file": "testData.csv",
+    "output_img": "output.png",
+    "main": "ver-bar-plot.r",
+    "run": ["Rscript", "{main}", "--config", "input.json"],
+    "href": "/basic/vertical-bar-plot",
+    "tag": ["vue", "ranking"],
+    "meta": {
+        "score": 5,
+        "author": "HZAU-MAIZE | Wenjie Wei",
+        "releaseDate": "2023-11-22",
+        "updateDate": "2023-11-22"
+    }
+}

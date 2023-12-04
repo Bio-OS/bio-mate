@@ -1,0 +1,25 @@
+{
+    "name": {
+        "zh_cn": "密度相关图",
+        "en": "Density Point Correlation Diagram"
+    },
+    "alias": ["DensityPoint"],
+    "intro": {
+        "zh_cn": "密度相关图是展示密集观测点在两个变量间相关的图",
+        "en": "Density Point Correlation Diagram"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "testData.csv",
+    "output_img": "output.png",
+    "main": "densitypoint.r",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/densitypoint",
+    "tag": ["vue", "ranking"],
+    "meta": {
+        "score": 5,
+        "author": "HZUA-MAIZE | Wenjie Wei",
+        "releaseDate": "2023-11-28",
+        "updateDate": "2023-11-28"
+    }
+}

@@ -1,0 +1,22 @@
+{
+    "dataFile": {
+        "dataFilePath": "testData.csv"
+    },
+    "columns": {
+        "name": "name",
+        "value": "value"
+    },
+    "general": {
+        "title": "ver-bar-plot title",
+        "x_name": "x name",
+        "y_name": "y name",
+        "titleSize": 15,
+        "titlePosition": 0.5
+    },
+    "plot_settings": {
+        "fillcolor": "steelblue",
+        "order": 1,
+        "barWidth": 0.8,
+        "showValue": false
+    }
+}

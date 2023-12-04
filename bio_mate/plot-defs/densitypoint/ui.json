@@ -1,0 +1,165 @@
+{
+    "dataArg": {
+        "datTable": [{
+                "label": "X"
+            },
+            {
+                "label": "Y"
+            }
+        ]
+    },
+    "columns": [{
+            "type": "input",
+            "required": true,
+            "key": "X",
+            "label": "X var name",
+            "placeholder": "请输入",
+            "help": "请输入X轴变量名称"
+        },
+        {
+            "type": "input",
+            "required": true,
+            "key": "Y",
+            "label": "Y var name",
+            "placeholder": "请输入",
+            "help": "请输入Y轴变量名称"
+        }
+    ],
+    "general": [{
+            "type": "input",
+            "key": "Title",
+            "label": "标题",
+            "placeholder": "请输入标题"
+        },
+        {
+            "type": "number",
+            "key": "PlotLineSize",
+            "label": "背景线粗细",
+            "placeholder": "请输入背景线粗细值"
+        },
+        {
+            "type": "number",
+            "key": "PlotRectSize",
+            "label": "边框粗细",
+            "placeholder": "请输入边框粗细值"
+        },
+        {
+            "type": "number",
+            "key": "LabelSize",
+            "label": "字体大小",
+            "placeholder": "请输入字体大小值"
+        },
+        {
+            "type": "number",
+            "key": "plotwidth",
+            "label": "图片宽度",
+            "help": "请输入宽度px,如1600",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "number",
+            "key": "plotheight",
+            "label": "图片高度",
+            "help": "请输入高度px,如1200",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "input",
+            "key": "pictureRes",
+            "label": "图片分辨率",
+            "help": "默认是300",
+            "placeholder": "请输入图片分辨率"
+        },
+        {
+            "type": "input.11",
+            "key": "PlotColor",
+            "label": "图片密度颜色",
+            "help": "默认是需要11个",
+            "placeholder": "请输入图片密度颜色"
+        },
+        {
+            "type": "number",
+            "key": "titlehjust",
+            "label": "主图标题位置",
+            "help": "默认是0.5，即居中",
+            "placeholder": "请输入主图标题位置值"
+        }
+    ],
+    "plot_settings": [{
+            "type": "number",
+            "key": "RLabelSize",
+            "label": "相关系数字体大小",
+            "placeholder": "请输入相关系数字体大小值"
+        },
+        {
+            "type": "number",
+            "key": "Bin_Count",
+            "label": "密度点图区块个数",
+            "placeholder": "请输入区块个数值"
+        },
+        {
+            "type": "number",
+            "key": "LineSize",
+            "label": "拟合线粗细",
+            "placeholder": "请输入拟合线粗细值"
+        },
+        {
+            "type": "switch",
+            "key": "Addse",
+            "label": "拟合线标准差"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "right", "value": "right" },
+                { "label": "left", "value": "left" },
+                { "label": "top", "value": "top" },
+                { "label": "bottom", "value": "bottom" }
+            ],
+            "key": "legendpos",
+            "label": "图例位置",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请从right,left, top, bottom选择一个"
+        },
+        {
+            "type": "input",
+            "key": "LineColor",
+            "label": "拟合线颜色",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请输入一种颜色, 例如red"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "right", "value": "right" },
+                { "label": "left", "value": "left" },
+                { "label": "center", "value": "center" },
+                { "label": "middle", "value": "middle" }
+            ],
+            "key": "RLabelXpos",
+            "label": "相关系数值横向位置",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请从'right', 'left', 'center', 'middle'选择一个"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "right", "value": "right" },
+                { "label": "left", "value": "left" },
+                { "label": "center", "value": "center" },
+                { "label": "middle", "value": "middle" }
+            ],
+            "key": "RLabelYpos",
+            "label": "相关系数值纵向位置",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "'bottom', 'top', 'center', 'middle'选择一个"
+        }
+    ],
+    "extra": {
+
+    }
+}

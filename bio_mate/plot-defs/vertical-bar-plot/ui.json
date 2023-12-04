@@ -1,0 +1,113 @@
+{
+    "data": {
+        "datTable": {
+            "type": "what-means?",
+            "required": true,
+            "label": "messages.common.dataTable"
+        }
+    },
+    "dataArg": {
+        "datTable": [{
+                "label": "name"
+            },
+            {
+                "label": "value"
+            }
+        ]
+    },
+    "columns": [{
+            "type": "input",
+            "required": true,
+            "key": "name",
+            "label": "name",
+            "placeholder": "请输入",
+            "help": "请输入数据文件中name列名称"
+        },
+        {
+            "type": "input",
+            "required": true,
+            "key": "value",
+            "label": "value",
+            "placeholder": "请输入",
+            "help": "请输入数据文件中value列名称"
+        }
+    ],
+    "general": [{
+            "type": "input",
+            "key": "title",
+            "label": "标题",
+            "placeholder": "请输入标题"
+        },
+        {
+            "type": "input",
+            "key": "x_name",
+            "label": "X轴名称",
+            "placeholder": "请输入X轴名称"
+        },
+        {
+            "type": "input",
+            "key": "y_name",
+            "label": "Y轴名称",
+            "placeholder": "请输入Y轴名称"
+        },
+        {
+            "type": "number",
+            "key": "titleSize",
+            "label": "标题字号",
+            "required": true,
+            "help": "请输入标题字号，以正整数表示",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "Center", "value": 0.5 },
+                { "label": "Right-Align", "value": 1 },
+                { "label": "Left-Align", "value": 0 }
+            ],
+            "key": "titlePosition",
+            "label": "标题位置",
+            "required": true,
+            "help": "请选择标题位置"
+        }
+    ],
+    "plot_settings": [{
+            "type": "input",
+            "key": "fillcolor",
+            "label": "填充颜色",
+            "required": false,
+            "placeholder": "请输入",
+            "help": "请输入填充颜色"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "保持输入顺序", "value": 1 },
+                { "label": "name列顺序", "value": 2 },
+                { "label": "name列逆序", "value": 3 },
+                { "label": "value列顺序", "value": 4 },
+                { "label": "value列逆序", "value": 5 }
+            ],
+            "key": "order",
+            "label": "排列顺序",
+            "required": true,
+            "help": "请选择排列顺序"
+        },
+        {
+            "type": "number",
+            "key": "barWidth",
+            "label": "条形宽度",
+            "required": false,
+            "placeholder": "请输入",
+            "help": "请输入条形宽度, 范围为0-1"
+        },
+        {
+            "type": "switch",
+            "key": "showValue",
+            "label": "显示数值",
+            "help": "是否显示数值"
+        }
+    ],
+    "extra": {}
+
+}

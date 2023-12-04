@@ -1,0 +1,25 @@
+{
+    "name": {
+        "zh_cn": "多变量检验提琴箱型组合图",
+        "en": "Mul-Var Test violin and boxplot combination Plot"
+    },
+    "alias": ["Mul-Var Test violin and boxplot combination Plot"],
+    "intro": {
+        "zh_cn": "多变量检验提琴箱型组合图是展示不同类别间方差显著性检验差异的图",
+        "en": "Mul-Var Test violin and boxplot combination Plot"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "testData.csv",
+    "output_img": "output.png",
+    "main": "T-testViolin.r",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/T-testViolin",
+    "tag": ["vue", "ranking"],
+    "meta": {
+        "score": 5,
+        "author": "HZUA-MAIZE | Wenjie Wei",
+        "releaseDate": "2023-11-28",
+        "updateDate": "2023-11-28"
+    }
+}
