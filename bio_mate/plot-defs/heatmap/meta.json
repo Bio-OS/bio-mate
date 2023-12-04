@@ -1,0 +1,25 @@
+{
+    "name": {
+      "zh_cn": "热图",
+      "en": "Heatmap"
+    },
+    "alias": ["SDY-heatmap"],
+    "intro": {
+      "zh_cn": "热图是展示物种组成等比较好的可视化方法",
+      "en": "Heatmap"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "YW-Breathe_remove_host_profile.txt",
+    "output_img": "output.png",
+    "main": "Biomate_heatmap.R",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/heatmap",
+    "tag": ["vue", "ranking"],
+    "meta": {
+      "score": 5,
+      "author": "CAU | Dongyan Shao",
+      "releaseDate": "2023-09-22",
+      "updateDate": "2023-09-22"
+    }
+  }

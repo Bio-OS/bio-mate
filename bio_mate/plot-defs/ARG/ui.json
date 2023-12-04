@@ -1,0 +1,364 @@
+{
+    "data": {
+      "datTable": {
+        "type": "hiplot-textarea",
+        "required": true,
+        "label": "messages.common.dataTable"
+      }
+    },
+    "dataArg": {
+      "datTable": [
+        {
+          "label": "path"
+        },
+        {
+          "label": "ref"
+        } 
+      ]
+    },
+    "columns": [
+      {
+        "type": "input",
+        "required": true,
+        "key": "path",
+        "label": "path",
+        "placeholder": "请输入",
+        "help": "请输入数据文件中文件夹包含列名称"
+      },
+      {
+        "type": "input",
+        "required": true,
+        "key": "ref",
+        "label": "ref",
+        "placeholder": "请输入",
+        "help": "请输入数据文件中ref列名称（如没有ref可空白）"
+      }
+    ],
+    "general": [
+        
+      {
+        "type": "input",
+        "key": "title",
+        "label": "标题",
+        "placeholder": "请输入图标题"
+      },
+      {
+        "type": "input",
+        "key": "threads",
+        "label": "线程数",
+        "placeholder": "请输入提供线程数"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": true },
+          { "label": "No", "value": false }
+        ],
+        "key": "ref",
+        "label": "参考序列有无",
+        "required": true,
+        "placeholder": "请选择是否有参考序列，如果否，则随机选择"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": true },
+          { "label": "No", "value": false }
+        ],
+        "key": "tiplab",
+        "label": "标签有无",
+        "required": true,
+        "placeholder": "请选择是否需要标签"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": true },
+          { "label": "No", "value": false }
+        ],
+        "key": "heatmap",
+        "label": "热图有无",
+        "required": true,
+        "placeholder": "请选择是否需要热图"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": true },
+          { "label": "No", "value": false }
+        ],
+        "key": "barplot",
+        "label": "柱状图有无",
+        "required": true,
+        "placeholder": "请选择是否需要柱状图"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "No", "value": "xasis" },
+          { "label": "Yes", "value": "dandu" }
+        ],
+        "key": "treescaletype",
+        "label": "比例尺",
+        "required": true,
+        "placeholder": "是否需要比例尺"
+      }
+    ],
+    "plot_settings": [
+     {
+        "type": "select",
+        "options": [
+          { "label": "rectangular", "value": "rectangular" },
+          { "label": "circular", "value": "circular" }
+        ],
+        "key": "layout",
+        "label": "树-布局",
+        "required": true,
+        "placeholder": "请选择"
+      },
+      {
+        "type": "select",
+        "options": [
+          { "label": "Yes", "value": "1" },
+          { "label": "No", "value": "none" }
+        ],
+        "key": "branchlength",
+        "label": "树-分支长度",
+        "required": true,
+        "placeholder": "请选择是否无视树的分支长度"
+      },             
+      {
+        "type": "number",
+        "key": "treesize",
+        "label": "树-粗细",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入树的粗细"
+      },
+      {
+        "type": "input",
+        "key": "treecolor",
+        "label": "树-颜色",
+        "required": false,
+        "placeholder": "请输入",
+        "help": "请输入树的颜色"
+      }, 
+      {
+        "type": "select",
+        "options": [
+          { "label": "solid", "value": "solid" },
+          { "label": "dotted", "value": "dotted" },
+          { "label": "dotdash", "value": "dotdash" },      
+          { "label": "longdash", "value": "longdash" },  
+          { "label": "twodash", "value": "twodash" },     
+          { "label": "dashed", "value": "dashed" }
+        ],
+        "key": "treelinetype",
+        "label": "树-线条形式",
+        "required": true,
+        "placeholder": "请选择树的线条形式"
+      },
+      {
+        "type": "number",
+        "key": "tiplabsize",
+        "label": "树-标签大小",
+        "required": true,
+        "placeholder": "请输入树的标签大小",
+        "help": "请输入树的标签大小，例如1.8"
+      }, 
+      {
+        "type": "number",
+        "key": "star_size",
+        "label": "热图-圆的大小",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入数值，例如: 2.5"
+      },  
+      {
+        "type": "number",
+        "key": "starshape",
+        "label": "热图-单元形状",
+        "required": true,
+        "placeholder": "请输入形状代码",
+        "help": "请输入形状代码，例如: 15"
+      }, 
+      {
+        "type": "number",
+        "key": "starstroke",
+        "label": "热图-黑边粗细",
+        "required": true,
+        "placeholder": "请输入黑边粗细",
+        "help": "请输入黑边粗细，例如0.000001"
+      }, 
+      {
+        "type": "number",
+        "key": "staroffset",
+        "label": "热图-与树距离",
+        "required": true,
+        "placeholder": "请输入热图与树距离",
+        "help": "请输入热图与树距离，例如0.3"
+      }, 
+      {
+        "type": "number",
+        "key": "starpwidth",
+        "label": "热图-热图宽度",
+        "required": true,
+        "placeholder": "请输入热图宽度",
+        "help": "请输入热图宽度，例如0.8"
+      },
+      {
+        "type": "input",
+        "key": "starfillcolor",
+        "label": "热图-单元颜色",
+        "required": false,
+        "placeholder": "请输入热图单元颜色",
+        "help": "请输入单元颜色"
+      },
+      {
+        "type": "number",
+        "key": "startextsize",
+        "label": "热图-X轴字体大小",
+        "required": true,
+        "placeholder": "请输入X轴字体大小",
+        "help": "请输入热图-X轴字体大小，例如2.5"
+      }, 
+      {
+        "type": "number",
+        "key": "startextangle",
+        "label": "热图-X轴字体角度",
+        "required": true,
+        "placeholder": "请输入X轴字体倾斜角度",
+        "help": "请输入热图-X轴字体倾斜角度，例如-45"
+      }, 
+      {
+        "type": "number",
+        "key": "startextvjust",
+        "label": "热图-X轴字体垂直偏移",
+        "required": true,
+        "placeholder": "请输入X轴字体垂直偏移量",
+        "help": "请输入热图-X轴字体垂直偏移量，例如-1"
+      },
+      {
+        "type": "number",
+        "key": "startexthjust",
+        "label": "热图-X轴字体水平偏移",
+        "required": true,
+        "placeholder": "请输入X轴字体水平偏移量",
+        "help": "请输入热图-X轴字体垂直偏移量，例如0.3"
+      },
+      {
+        "type": "number",
+        "key": "startextlinesize",
+        "label": "热图-X轴粗细",
+        "required": true,
+        "placeholder": "请输入X轴粗细",
+        "help": "请输入热图-X轴粗细，例如0"
+      },
+      {
+        "type": "number",
+        "key": "barpwidth",
+        "label": "柱状图-图像长度",
+        "required": true,
+        "placeholder": "请输入柱状图图像长度",
+        "help": "请输入柱状图-图像长度，例如0.4"
+      },
+      {
+        "type": "number",
+        "key": "baroffset",
+        "label": "柱状图-图像距离",
+        "required": true,
+        "placeholder": "请输入柱状图和相邻部分的距离",
+        "help": "请输入柱状图和相邻部分的距离，例如0.1"
+      },
+      {
+        "type": "number",
+        "key": "barwidth",
+        "label": "柱状图-柱子宽度",
+        "required": true,
+        "placeholder": "请输入柱状图柱子宽度",
+        "help": "请输入柱状图柱子宽度，例如0.8"
+      },
+      {
+        "type": "input",
+        "key": "barcolor",
+        "label": "柱状图-柱子颜色",
+        "required": false,
+        "placeholder": "请输入柱状图柱子颜色",
+        "help": "请输入柱子的颜色"
+      },
+      {
+        "type": "number",
+        "key": "scalefontsize",
+        "label": "比例尺-字体大小",
+        "required": true,
+        "placeholder": "请输入比例尺字体大小",
+        "help": "请输入比例尺字体大小，例如3"
+      }, 
+      {
+        "type": "number",
+        "key": "scalelinesize",
+        "label": "比例尺-粗细",
+        "required": true,
+        "placeholder": "请输入比例尺粗细",
+        "help": "请输入比例尺粗细，例如2"
+      }, 
+      {
+        "type": "number",
+        "key": "scaleoffset",
+        "label": "比例尺-字与线的距离",
+        "required": true,
+        "placeholder": "请输入字与线的距离",
+        "help": "请输入字与线的距离，例如1"
+      },     
+      {
+        "type": "number",
+        "key": "width",
+        "label": "图像宽度",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入阈值，例如: 8"
+      },
+      {
+        "type": "number",
+        "key": "height",
+        "label": "图像高度",
+        "required": true,
+        "placeholder": "请输入",
+        "help": "请输入阈值，例如: 6"
+      }
+    ],
+    "extra": {
+      "p_cutoff": {
+        "type": "combobox",
+        "label": "messages.basic.volcano.pCutoff",
+        "items": [0.1, 0.05, 0.01, 0.001, 0.0001, 1e-5, 1e-6, 1e-7, 1e-8],
+        "class": "col-12 col-md-6"
+      },
+      "fc_cutoff": {
+        "type": "combobox",
+        "label": "messages.basic.volcano.fcCutoff",
+        "items": [0.5, 1, 2, 3, 4, 5],
+        "class": "col-12 col-md-6"
+      },
+      "show_top": {
+        "type": "switch",
+        "label": "messages.basic.volcano.showTop",
+        "class": "col-12"
+      },
+      "show_genes_num": {
+        "type": "slider",
+        "label": "messages.basic.volcano.show_genes_num",
+        "class": "col-12 col-md-6",
+        "if": "show_top",
+        "max": 500
+      },
+      "selected_genes": {
+        "type": "combobox",
+        "multiple": true,
+        "label": "messages.basic.volcano.selected_genes",
+        "class": "col-12 col-md-6",
+        "if": "show_top",
+        "items_func": "this.selectCols('datTable', 0)"
+      }
+    }
+  }

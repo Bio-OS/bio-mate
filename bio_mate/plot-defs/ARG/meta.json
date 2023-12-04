@@ -1,0 +1,25 @@
+{
+    "name": {
+      "zh_cn": "进化树图",
+      "en": "tree"
+    },
+    "alias": ["SDY-tree"],
+    "intro": {
+      "zh_cn": "进化树是展示菌株间亲缘关系的方式，加入耐药基因可帮助使用者更好的关注菌株特征",
+      "en": "tree"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "testpath.csv",
+    "output_img": "output.png",
+    "main": "Biomate_ARG.R",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/tree",
+    "tag": ["vue", "ranking"],
+    "meta": {
+      "score": 5,
+      "author": "CAU | Dongyan Shao",
+      "releaseDate": "2023-09-22",
+      "updateDate": "2023-09-22"
+    }
+  }
