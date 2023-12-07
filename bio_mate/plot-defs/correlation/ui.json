@@ -1,0 +1,126 @@
+{
+    "dataArg": {
+        "datTable": [{
+                "label": "set1"
+            },
+            {
+                "label": "set2"
+            },
+            {
+                "label": "set3"
+            },
+            {
+                "label": "set4"
+            },
+            {
+                "label": "set5"
+            }
+        ]
+    },
+    "columns": [{
+        "type": "input",
+        "required": true,
+        "key": "ID",
+        "label": "ID column name",
+        "placeholder": "请输入",
+        "help": "请输入观测个体ID列名称"
+    }],
+    "general": [{
+            "type": "input",
+            "key": "Title",
+            "label": "标题",
+            "placeholder": "请输入标题"
+        },
+        {
+            "type": "input",
+            "key": "labelcolor",
+            "label": "字体颜色",
+            "help": "请输入字体颜色,如black",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "input.11",
+            "key": "PlotColor",
+            "label": "相关系数大小颜色",
+            "help": "默认是需要11个",
+            "placeholder": "请输入相关系数大小颜色"
+        },
+        {
+            "type": "number",
+            "key": "plotwidth",
+            "label": "图片宽度",
+            "help": "请输入宽度px,如1600",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "number",
+            "key": "plotheight",
+            "label": "图片高度",
+            "help": "请输入高度px,如1200",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "input",
+            "key": "pictureRes",
+            "label": "图片分辨率",
+            "help": "默认是300",
+            "placeholder": "请输入图片分辨率"
+        }
+    ],
+    "plot_settings": [{
+            "type": "number",
+            "key": "LabelSize",
+            "label": "字体大小",
+            "placeholder": "请输入字体大小值"
+        },
+        {
+            "type": "number",
+            "key": "LegendLabelSize",
+            "label": "图例字体大小",
+            "placeholder": "请输入图例字体大小值"
+        },
+        {
+            "type": "number.4",
+            "key": "mars",
+            "label": "图四边空出距离",
+            "help": "四个值分别代表（bottom, lef, top, right）",
+            "placeholder": "请输入图例字体大小值"
+        },
+        {
+            "type": "number",
+            "key": "siglevel",
+            "label": "显著水平阈值",
+            "placeholder": "请输入显著水平阈值"
+        },
+        {
+            "type": "number",
+            "key": "pchsize",
+            "label": "不显著的标签大小",
+            "placeholder": "请输入不显著的标签大小值"
+        },
+        {
+            "type": "number",
+            "key": "SigLabelSize",
+            "label": "相关系数字体大小",
+            "placeholder": "请输入相关系数字体大小值"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "original", "value": "original" },
+                { "label": "AOE", "value": "AOE" },
+                { "label": "FPC", "value": "FPC" },
+                { "label": "hclust", "value": "hclust" },
+                { "label": "alphabet", "value": "alphabet" }
+            ],
+            "key": "ArrangeBy",
+            "label": "坐标排序根据",
+            "required": true,
+            "placeholder": "请输入",
+            "help": "请从original, AOE,FPC, hclust, alphabet选择一个"
+        }
+    ],
+    "extra": {
+
+    }
+}

@@ -1,0 +1,25 @@
+{
+    "name": {
+        "zh_cn": "多变量值密度分布图",
+        "en": "Mul-Var Value Density Distribution Plot"
+    },
+    "alias": ["Mul-VarValueDensityDistributionPlot"],
+    "intro": {
+        "zh_cn": "多变量值密度分布图是展示每个变量值密度分布的图",
+        "en": "Mul-VarValueDensityDistributionPlot"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "testData.csv",
+    "output_img": "output.png",
+    "main": "Distribution.r",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/Distribution",
+    "tag": ["vue", "ranking"],
+    "meta": {
+        "score": 5,
+        "author": "HZUA-MAIZE | Wenjie Wei",
+        "releaseDate": "2023-11-28",
+        "updateDate": "2023-11-28"
+    }
+}

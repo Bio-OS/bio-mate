@@ -1,0 +1,115 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "required": true,
+      "key": "Value",
+      "label": "Value Var",
+      "placeholder": "请输入",
+      "help": "请输入数值列的变量名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "platform",
+      "label": "platform Var",
+      "placeholder": "请输入",
+      "help": "请输入分类列的变量名称"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "Title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "BaseLabelSize",
+      "label": "所有标签的整体字体大小",
+      "placeholder": "请输入所有标签的整体字体大小值"
+    },
+    {
+      "type": "number",
+      "key": "BaseLineSize",
+      "label": "图背景线段的粗细",
+      "placeholder": "请输入图背景线段的粗细值"
+    },
+    {
+      "type": "input.11",
+      "key": "Color",
+      "label": "密度渐变色",
+      "help":"默认需要11个颜色",
+      "placeholder": "请密度渐变色"
+    },
+    {
+      "type": "number",
+      "key": "plotwidth",
+      "label": "图片宽度",
+      "help": "请输入宽度px,如1600",
+      "placeholder": "请输入"
+    },
+    {
+      "type": "number",
+      "key": "plotheight",
+      "label": "图片高度",
+      "help": "请输入高度px,如1200",
+      "placeholder": "请输入"
+    },
+    {
+      "type": "input",
+      "key": "pictureRes",
+      "label": "图片分辨率",
+      "help":"默认是300",
+      "placeholder": "请输入图片分辨率"
+    },
+    {
+      "type": "number",
+      "key": "titlehjust",
+      "label": "主图标题位置",
+      "help":"默认是0.5，即居中",
+      "placeholder": "请输入主图标题位置值"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "number",
+      "key": "ridges_gradientSize",
+      "label": "峰峦的大小",
+      "placeholder": "请峰峦的大小值"
+    },
+    {
+      "type": "switch",
+      "key": "center_axis_labels",
+      "label": "横坐标标签是否置于中间"
+    },
+    {
+      "type": "switch",
+      "key": "grid",
+      "label": "是否添加网格"
+    }
+  ],
+  "extra": {
+
+  }
+}

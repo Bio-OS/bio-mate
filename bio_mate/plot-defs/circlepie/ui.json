@@ -1,0 +1,134 @@
+{
+    "dataArg": {
+        "datTable": [{
+                "label": "set1"
+            },
+            {
+                "label": "set2"
+            },
+            {
+                "label": "set3"
+            },
+            {
+                "label": "set4"
+            },
+            {
+                "label": "set5"
+            }
+        ]
+    },
+    "columns": [{
+            "type": "input",
+            "required": true,
+            "key": "value",
+            "label": "value",
+            "placeholder": "请输入",
+            "help": "请输入数值列的变量名称"
+        },
+        {
+            "type": "input",
+            "required": true,
+            "key": "type",
+            "label": "type",
+            "placeholder": "请输入",
+            "help": "请输入分类列的变量名称"
+        }
+    ],
+    "general": [{
+            "type": "input",
+            "key": "Title",
+            "label": "标题",
+            "placeholder": "请输入标题"
+        },
+        {
+            "type": "number",
+            "key": "plotwidth",
+            "label": "图片宽度",
+            "help": "请输入宽度px,如1600",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "number",
+            "key": "legendSize",
+            "label": "图例大小",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "number",
+            "key": "plotheight",
+            "label": "图片高度",
+            "help": "请输入高度px,如1200",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "input",
+            "key": "pictureRes",
+            "label": "图片分辨率",
+            "help": "默认是300",
+            "placeholder": "请输入图片分辨率"
+        },
+        {
+            "type": "input.2",
+            "key": "PlotColor",
+            "label": "不同类填充颜色",
+            "placeholder": "请输入",
+            "help": "请输入分类列的变量颜色，仅支持两个，系统默认会扩展为渐变色"
+        },
+        {
+            "type": "number",
+            "key": "BaseLabelSize",
+            "label": "所有标签的整体字体大小",
+            "placeholder": "请输入所有标签的整体字体大小值"
+        },
+        {
+            "type": "number",
+            "key": "titlehjust",
+            "label": "主图标题位置",
+            "help": "默认是0.5，即居中",
+            "placeholder": "请输入主图标题位置值"
+        }
+    ],
+    "plot_settings": [{
+            "type": "number",
+            "key": "barwidths",
+            "label": "环形径向宽度",
+            "placeholder": "请输入环形径向宽度值"
+        },
+        {
+            "type": "number",
+            "key": "LabelSize",
+            "label": "标签字体大小",
+            "placeholder": "请输入百分比标签字体大小值"
+        },
+        {
+            "type": "number.2",
+            "key": "Expand",
+            "label": "中心空圆半径大小",
+            "help": "（0-1）默认是0.95，0.95,越大意味着中心空圆半径越大",
+            "placeholder": "请输入中心空圆半径大小值"
+        },
+        {
+            "type": "number.2",
+            "key": "LegendPos",
+            "label": "图例的位置",
+            "help": "例如c(1, 0.5)分别指横纵坐标位置",
+            "placeholder": "请输入图例位置"
+        },
+        {
+            "type": "number",
+            "key": "Legendcols",
+            "label": "图例列数",
+            "placeholder": "请输入图例列数值"
+        },
+        {
+            "type": "input",
+            "key": "labelcolor",
+            "label": "字体颜色",
+            "help": "请输入字体颜色,如black",
+            "placeholder": "请输入"
+        }
+    ],
+    "extra": {
+
+    }
+}

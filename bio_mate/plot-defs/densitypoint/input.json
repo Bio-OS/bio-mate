@@ -1,0 +1,31 @@
+{
+  "dataFile":{
+    "dataFilePath":"testData.csv"
+  },
+  "columns": {
+    "X": "Xvar",
+    "Y": "Yvar"
+  },
+  "general": {
+    "Title": "Density Point Correlation Plot",
+    "LabelSize": 14,
+    "PlotRectSize":0.8,
+    "PlotLineSize":0.8,
+    "pictureRes":300,
+    "plotwidth":1600,
+    "plotheight":1200,
+    "titlehjust":0.5,
+    "PlotColor":["#5E4FA2", "#3288BD", "#66C2A5", "#ABDDA4", "#E6F598", "#FFFFBF", "#FEE08B", "#FDAE61", "#F46D43", "#D53E4F", "#9E0142"]
+  },
+  "plot_settings": {
+    "RLabelSize": 4,
+    "Bin_Count": 30,
+    "legendpos": "right",
+    "LineColor": "red",
+    "LineSize": 1,
+    "Addse": false,
+    "RLabelXpos": "left",
+    "RLabelYpos": "top"
+  }
+}
+

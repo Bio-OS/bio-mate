@@ -1,0 +1,125 @@
+{
+    "dataArg": {
+        "datTable": [{
+                "label": "set1"
+            },
+            {
+                "label": "set2"
+            },
+            {
+                "label": "set3"
+            },
+            {
+                "label": "set4"
+            },
+            {
+                "label": "set5"
+            }
+        ]
+    },
+    "columns": [{
+            "type": "input",
+            "required": true,
+            "key": "Value",
+            "label": "Value Var",
+            "placeholder": "请输入",
+            "help": "请输入数值列的变量名称"
+        },
+        {
+            "type": "input",
+            "required": true,
+            "key": "platform",
+            "label": "platform Var",
+            "placeholder": "请输入",
+            "help": "请输入分类列的变量名称"
+        }
+    ],
+    "general": [{
+            "type": "input",
+            "key": "Title",
+            "label": "标题",
+            "placeholder": "请输入标题"
+        },
+        {
+            "type": "number",
+            "key": "plotwidth",
+            "label": "图片宽度",
+            "help": "请输入宽度px,如1600",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "number",
+            "key": "plotheight",
+            "label": "图片高度",
+            "help": "请输入高度px,如1200",
+            "placeholder": "请输入"
+        },
+        {
+            "type": "input",
+            "key": "pictureRes",
+            "label": "图片分辨率",
+            "help": "默认是300",
+            "placeholder": "请输入图片分辨率"
+        },
+        {
+            "type": "input",
+            "key": "PlotColor",
+            "label": "线段的颜色",
+            "placeholder": "请输入线段的颜色"
+        },
+        {
+            "type": "number",
+            "key": "BaseLabelSize",
+            "label": "所有标签的整体字体大小",
+            "placeholder": "请输入所有标签的整体字体大小值"
+        },
+        {
+            "type": "number",
+            "key": "BaseLineSize",
+            "label": "图背景线段的粗细",
+            "placeholder": "请输入图背景线段的粗细值"
+        },
+        {
+            "type": "number",
+            "key": "BaseRectSize",
+            "label": "图边框的粗细",
+            "placeholder": "请输入图边框的粗细值"
+        },
+        {
+            "type": "number",
+            "key": "titlehjust",
+            "label": "主图标题位置",
+            "help": "默认是0.5，即居中",
+            "placeholder": "请输入主图标题位置值"
+        }
+    ],
+    "plot_settings": [{
+            "type": "number",
+            "key": "CurveLineSize",
+            "label": "线段的粗细",
+            "placeholder": "请输入线段的粗细值"
+        },
+        {
+            "type": "number",
+            "key": "nrow",
+            "label": "分面的行数",
+            "placeholder": "请输入图例列数值"
+        },
+        {
+            "type": "select",
+            "options": [
+                { "label": "free", "value": "free" },
+                { "label": "free_x", "value": "free_x" },
+                { "label": "free_y", "value": "free_y" },
+                { "label": "fixed", "value": "fixed" }
+            ],
+            "key": "scales",
+            "label": "每个分面坐标轴缩放",
+            "help": "请从free, free_x, free_y, fixed中选择一个",
+            "placeholder": "请输入缩放的类别"
+        }
+    ],
+    "extra": {
+
+    }
+}
