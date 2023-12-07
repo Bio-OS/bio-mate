@@ -59,6 +59,7 @@ def plot_embedding(config_file, output_file):
     else:
         Normalized=False
 
+
     adata=sc.read(data_file_path)
     adata.layers['counts']=adata.X.copy()
     adata.var_names_make_unique()
