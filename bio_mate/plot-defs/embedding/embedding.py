@@ -59,13 +59,6 @@ def plot_embedding(config_file, output_file):
     else:
         Normalized=False
 
-    # 在这里编写绘制火山图的代码
-    # 示例：使用matplotlib
-    # 注意：这里只是一个示例，具体的绘图逻辑需要根据实际情况进行调整
-    # 假设有一个函数 plot_volcano_data(data) 用于绘制火山图
-    # 你需要根据实际情况定义该函数，并传递解析的数据进行绘制
-
-    # data = 从数据文件中读取数据的逻辑，例如使用pandas读取CSV文件
     adata=sc.read(data_file_path)
     adata.layers['counts']=adata.X.copy()
     adata.var_names_make_unique()
