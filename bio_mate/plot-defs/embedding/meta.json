@@ -1,0 +1,25 @@
+{
+  "name": {
+    "zh_cn": "嵌入图",
+    "en": "Embedding Diagram"
+  },
+  "alias": ["Embedding"],
+  "intro": {
+    "zh_cn": "嵌入图是一种观察细胞低维可视化的效果图",
+    "en": "The embedding map is an effect map for observing low-dimensional visualisations of cells"
+  },
+  "src": "数据形如：AnnData object with n_obs × n_vars = 2930 × 13913",
+  "sample_img": "img.jpg",
+  "sample_data_file": "adata.h5ad",
+  "output_img": "output.png",
+  "main": "embedding.py",
+  "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
+  "href": "./",
+  "tag": ["vue", "ranking"],
+  "meta": {
+    "score": 5,
+    "author": "Zehua Zeng",
+    "releaseDate": "2023-11-20",
+    "updateDate": "2023-11-20"
+  }
+}

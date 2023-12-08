@@ -1,0 +1,29 @@
+{
+  "dataFile":{
+    "dataFilePath":"adata_vis.h5ad"
+  },
+  "columns": {
+    "color": "Ground Truth",
+    "img_key":"hires"
+  },
+  "general": {
+    "title": "Spatial Diagram",
+    "bordercolor":"black",
+    "alpha": 1,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "spot_size":"None",
+    "legend_fontsize":12,
+    "legend_loc":"right margin",
+    "legend_fontweight":"normal",
+    "legend_fontoutline":1,
+    "palette":"default", 
+    "cmap":"viridis",
+    "vmin":0,
+    "vmax":4,
+    "figwidth":4, 
+    "figheight":4,
+    "fontsize":12
+  }
+}

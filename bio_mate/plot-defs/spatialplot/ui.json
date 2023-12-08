@@ -1,0 +1,147 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "set1"
+      },
+      {
+        "label": "set2"
+      },
+      {
+        "label": "set3"
+      },
+      {
+        "label": "set4"
+      },
+      {
+        "label": "set5"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "key": "color",
+      "label": "可视化内容",
+      "required": true,
+      "placeholder": "可以是obs里面的，也可以是var_names里面的"
+    },
+    {
+      "type": "input",
+      "key": "img_key",
+      "label": "图层内容",
+      "required": true,
+      "placeholder": "默认是hires（高分辨率）"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number",
+      "key": "alpha",
+      "label": "透明度",
+      "placeholder": "请输入透明度值"
+    },
+    {
+      "type": "input",
+      "key": "labelcolor",
+      "label": "标签颜色",
+      "placeholder": "请输入标签颜色"
+    },
+    {
+      "type": "input",
+      "key": "bordercolor",
+      "label": "边界颜色",
+      "help": "请输入边界颜色,如black",
+      "placeholder": "请输入"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "input",
+      "key": "spot_size",
+      "label": "空转spot大小",
+      "placeholder": "请输入spot大小，默认是None",
+      "help": "请输入spot大小"
+    },
+    {
+      "type": "input",
+      "key": "cmap",
+      "label": "颜色条",
+      "placeholder": "请输入颜色条，默认是viridis",
+      "help": "请输入颜色条"
+    },
+    {
+      "type": "input",
+      "key": "palette",
+      "label": "颜色组",
+      "placeholder": "请输入颜色组，默认有red,orange,blue或green",
+      "help": "如需自定义颜色请用,做分隔符，如'#00FF00','#0000FF'"
+    },
+    {
+      "type": "input",
+      "key": "vmin",
+      "label": "最小值",
+      "placeholder": "请输入最小值",
+      "help": "请输入最小值"
+    },
+    {
+      "type": "input",
+      "key": "vmax",
+      "label": "最大值",
+      "placeholder": "请输入最大值",
+      "help": "请输入最大值"
+    },
+    {
+      "type": "input",
+      "key": "figwidth",
+      "label": "图片宽度",
+      "placeholder": "图片宽度，默认为4",
+      "help": "图片宽度"
+    },
+    {
+      "type": "input",
+      "key": "figheight",
+      "label": "图片高度",
+      "placeholder": "图片高度，默认为3",
+      "help": "图片高度"
+    },
+    {
+      "type": "input",
+      "key": "legend_fontsize",
+      "label": "图注字体大小",
+      "placeholder": "图注字体大小，默认为12",
+      "help": "图注字体大小"
+    },
+    {
+      "type": "input",
+      "key": "legend_loc",
+      "label": "图注字体位置",
+      "placeholder": "'on data'`, `'right margin'`",
+      "help": "从'on data'`, `'right margin'`中选择"
+    },
+    {
+      "type": "input",
+      "key": "legend_fontweight",
+      "label": "图注字体粗细",
+      "placeholder": "图注字体粗细，默认为normal",
+      "help": "normal, bold, or one of ['light', 'normal', 'medium', 'semibold', 'bold', 'heavy', 'black']"
+    },
+    {
+      "type": "input",
+      "key": "legend_fontoutline",
+      "label": "图注字体边缘粗细",
+      "placeholder": "图注字体边缘粗细，默认为1",
+      "help": "图注字体边缘粗细"
+    }
+
+  ],
+  "extra": {
+
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "dataFile":{
+    "dataFilePath":"/Users/fernandozeng/Downloads/10X43_1.h5ad"
+  },
+  "columns": {
+    "Normalized": "True"
+  },
+  "general": {
+    "title": "Embedding Diagram",
+    "bordercolor":"black",
+    "alpha": 0.8,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "color": "clusters",
+    "basis":"X_umap",
+    "cmap":"Reds",
+    "fontsize":12,
+    "palette":[0,8,0,0,0,0,0,0]
+  }
+}

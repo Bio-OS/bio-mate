@@ -1,0 +1,23 @@
+{
+  "dataFile":{
+    "dataFilePath":"data.csv"
+  },
+  "columns": {
+    "x": "total_bill"
+  },
+  "general": {
+    "title": "Hist Diagram",
+    "bordercolor":"black",
+    "alpha": 0.8,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "xlabels":"Total Bill",
+    "ylabels":"Density",
+    "bins":10,
+    "fontsize":12,
+    "color":"#3B4A25",
+    "log_scale":"False",
+    "histtype":"bar"
+  }
+}

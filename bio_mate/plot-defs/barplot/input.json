@@ -1,0 +1,22 @@
+{
+  "dataFile":{
+    "dataFilePath":"data.csv"
+  },
+  "columns": {
+    "x": "day",
+    "y":"total_bill"
+  },
+  "general": {
+    "title": "Bar Diagram",
+    "bordercolor":"black",
+    "alpha": 1,
+    "labelcolor":"black"
+  },
+  "plot_settings": {
+    "xlabels":"day",
+    "ylabels":"total_bill",
+    "fontsize":12,
+    "width":0.8,
+    "color":"#1f577b"
+  }
+}
