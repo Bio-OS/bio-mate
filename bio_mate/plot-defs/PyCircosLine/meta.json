@@ -1,0 +1,25 @@
+{
+  "name": {
+    "zh_cn": "基因组圈图-line",
+    "en": "PyCircos line Diagram"
+  },
+  "alias": ["DEG-Circos-line"],
+  "intro": {
+    "zh_cn": "基因组圈图是一种在展示位点突变,覆盖度,基因融合的可视化图形",
+    "en": "PyCircos line PointDiagram"
+  },
+  "src": "",
+  "sample_img": "img.png",
+  "sample_data_file": "datafile.txt",
+  "output_img": "output.png",
+  "main": "line_main.py",
+  "run": ["python", "{main}", "input.json"],
+  "href": "/basic/circos",
+  "tag": ["vue", "ranking"],
+  "meta": {
+    "score": 5,
+    "author": "KingMed | JunhaoDeng",
+    "releaseDate": "2023-11-21",
+    "updateDate": "2023-11-21"
+  }
+}

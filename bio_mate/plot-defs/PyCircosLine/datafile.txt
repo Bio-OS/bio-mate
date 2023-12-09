@@ -1,0 +1,6 @@
+PlotName	PlotType	PlotData
+genome	genome	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLine/data/hg19.gsize.txt
+karyotype	karyotype	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLine/data/karyotype.human.hg19.txt
+sample1	line	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLine/data/sample_depth1.txt
+sample2	line	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLine/data/sample_depth2.txt
+sample3	line	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLine/data/sample_depth3.txt

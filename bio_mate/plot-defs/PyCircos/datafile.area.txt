@@ -1,0 +1,4 @@
+PlotName	PlotType	PlotData	PlotRadius
+genome	genome	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircos/data/hg19.gsize.txt	350,360
+karyotype	karyotype	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircos/data/karyotype.human.hg19.txt	350,360
+depth_area	line_area	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircos/data/sample_coverage.txt	200,340
