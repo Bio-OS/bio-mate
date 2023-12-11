@@ -1,0 +1,61 @@
+{
+  "dataFile":{
+    "dataFilePath":"datafile.txt"
+  },
+  "columns": {
+    "PlotName": "PlotName",
+    "PlotType": "PlotType",
+    "PlotData": "PlotData",
+    "PlotRadius": "PlotRadius"
+  },
+  "general": {
+    "title": "Histogram of depth across to reference genome",
+    "title_pos": [500, 950],
+    "title_fontSize": 30,
+    "title_fillColor": "#000000",
+    "image_size": [1000, 1000],
+    "cex": 1,
+    "plot_center": [500, 500],
+    "draw_genomes": "",
+    "block_angles": 1,
+    "first_angle": 80,
+    "first_end_block_angle": 30,
+    "genome_r": [350, 360],
+    "hist_1_r": [300, 340],
+    "hist_2_r": [260, 290],
+    "hist_3_r": [220, 250],    
+    "show_dataname": true,
+    "dataname_scale_fontSize": 12,
+    "dataname_scale_angle": 0, 
+    "dataname_title_fontSize": 20,
+    "dataname_title_angle": 0,
+    "dataname_title_angle_dr": 10
+  },
+  "plot_settings": {
+    "show_genome": true,
+    "chr_ring_fmt_fillColor": "rgba(1,0,1,1)", 
+    "chr_ring_fmt_strokeColor": "rgba(0,0,0,1)",
+    "chr_ring_fmt_strokeWidth": 1.5,
+    "show_chr_label": true,
+    "chr_label_dr": 5,
+    "chr_label_fmt_fontSize": 20,
+    "chr_label_fmt_fillColor": "rgba(0,0,0,1)",
+    "show_chr_scale": true,
+    "chr_scale_step": 10000000,
+    "chr_scale_dr": 2,
+    "chr_scale_fmt_strokeWidth": 0.5,
+    "chr_scale_label_fmt_fontSize": 4,
+    "show_karyotype": true,
+    "show_cyto_label": true,
+    "cyto_label_dr": 2,
+    "cyto_label_fmt_fontSize": 4,
+    "cyto_label_fmt_fillColor":  "rgba(0,0,0,1)",
+    "show_hist": true,
+    "hist_limit_value": [null, null],
+    "hist_split_value": 0,
+    "hist_strokeWidth": 0.01,
+    "show_hist_label": true,
+    "hist_label_fontSize": 10,
+    "hist_label_fillColor": "#000000"
+  }
+}

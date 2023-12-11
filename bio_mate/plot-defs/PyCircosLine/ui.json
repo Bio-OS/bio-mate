@@ -1,0 +1,313 @@
+{
+  "dataArg": {
+    "datTable": [
+      {
+        "label": "PlotName"
+      },
+      {
+        "label": "PlotType"
+      },
+      {
+        "label": "PlotData"
+      },
+      {
+        "label": "PlotRadius"
+      }
+    ]
+  },
+  "columns": [
+    {
+      "type": "input",
+      "required": true,
+      "key": "PlotName",
+      "label": "PlotName",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中PlotName列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "PlotType",
+      "label": "PlotType",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中PlotType列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "PlotData",
+      "label": "PlotData",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中PlotData列名称"
+    },
+    {
+      "type": "input",
+      "required": true,
+      "key": "PlotRadius",
+      "label": "PlotRadius",
+      "placeholder": "请输入",
+      "help": "请输入数据文件中PlotRadius列名称"
+    }
+  ],
+  "general": [
+    {
+      "type": "input",
+      "key": "title",
+      "label": "标题",
+      "placeholder": "请输入标题"
+    },
+    {
+      "type": "number.2",
+      "key": "title_pos",
+      "label": "标题坐标",
+      "placeholder": "请输入数值"
+    },
+    {
+      "type": "number",
+      "required": true,
+      "key": "title_fontSize",
+      "label": "标题字体大小"
+    },
+    {
+      "type": "input",
+      "key": "title_fillColor",
+      "required": true,
+      "label": "标题字体颜色",
+      "placeholder": "请输入标题字体颜色"
+    },
+    {
+      "type": "number.2",
+      "key": "image_size",
+      "label": "画布大小(宽度, 高度)",      
+      "placeholder": "请输入画布大小"
+    },
+    {
+      "type": "number",
+      "key": "cex",
+      "label": "图片缩放比例",
+      "help": "请输入图片缩放比例",
+      "placeholder": "请输入图片缩放比例"
+    },
+    {
+      "type": "number.2",
+      "key": "plot_center",
+      "label": "绘图中心坐标(x,y)",
+      "placeholder": "请输入绘图圆心坐标",
+      "help":"请输入绘图中心坐标(centerx, centery)"
+    },
+    {
+      "type": "input",
+      "key": "draw_genomes",
+      "label": "挑选绘制的染色体",
+      "help": "请挑选基因组中包含的染色体绘图, 空值表示绘制所有染色体; 多个染色体用空格分隔(例如:1 2 X Y)"
+    },
+    {
+      "type": "number",
+      "key": "block_angles",
+      "required": true,
+      "label": "基因组之间间隔的角度",
+      "placeholder": "请输入基因组之间间隔角度",
+      "help": "请输入基因组之间间隔角度, 注意间隔角度之和不要超过360度"
+    },
+    {
+      "type": "number",
+      "key": "first_angle",
+      "required": true,
+      "label": "基因组圈图绘图的起始角度",
+      "placeholder": "请输入绘图起始角度",
+      "help": "请输入基因组绘图起始角度"
+    },
+    {
+      "type": "number",
+      "key": "first_end_block_angle",
+      "label": "首尾染色体之间分隔的角度"
+    },
+    {
+      "type": "number.2",
+      "key": "genome_r",
+      "required": true,
+      "label": "genome基因组绘图区域(内径,外径)",
+      "help": "请输入基因组绘图区与圆心的半径距离"
+    },
+    {
+      "type": "number.3",
+      "key": "line_inner",
+      "required": true,
+      "label": "line折线图绘图区内环半径",
+      "help": "请输入折线图绘图区与圆心的最小半径距离"
+    },
+    {
+      "type": "number.3",
+      "key": "line_outer",
+      "required": true,
+      "label": "line折线图绘图区外环半径",
+      "help": "请输入折线图绘图区与圆心的最大半径距离"
+    },
+    {
+      "type": "switch",
+      "key": "show_dataname",
+      "label": "显示数据标题名称",
+      "help": "datafile中的数据"
+    },
+    {
+      "type": "number",
+      "required": true,
+      "key": "dataname_scale_fontSize",
+      "label": "数据刻度标签大小"
+    },
+    {
+      "type": "number",
+      "required": true,
+      "key": "dataname_scale_angle",
+      "label": "数据刻度标签角度"
+    },
+    {
+      "type": "number",
+      "required": true,
+      "key": "dataname_title_fontSize",
+      "label": "数据标题大小"
+    },
+    {
+      "type": "number",
+      "required": true,
+      "key": "dataname_title_angle",
+      "label": "数据标题角度"
+    },
+    {
+      "type": "number",
+      "required": true,
+      "key": "dataname_title_angle_dr",
+      "label": "数据标题与首个染色体间隔角度"
+    }
+  ],
+  "plot_settings": [
+    {
+      "type": "switch",
+      "key": "show_genome",
+      "label": "显示基因组",
+      "help": "显示基因组"
+    },
+    {
+      "type": "input",
+      "key": "chr_ring_fmt_fillColor",
+      "required": false,
+      "label": "基因组渲染填充颜色",
+      "help": "基因组渲染填充颜色, 格式示例: rgba(1,0,1,1), rgb(255, 0, 255), #FF00FF, 123"
+    },
+    {
+      "type": "input",
+      "key": "chr_ring_fmt_strokeColor",
+      "label": "基因组轮廓线条颜色",
+      "help": "基因组轮廓线条颜色"
+    },
+    {
+      "type": "number",
+      "key": "chr_ring_fmt_strokeWidth",
+      "label": "基因组轮廓线条粗细"
+    },
+    {
+      "type": "switch",
+      "key": "show_chr_label",
+      "label": "显示基因组标签"
+    },
+    {
+      "type": "number",
+      "key": "chr_label_dr",
+      "label": "基因组标签与基因组圈的径向外延距离"
+    },
+    {
+      "type": "number",
+      "key": "chr_label_fmt_fontSize",
+      "label": "基因组标签字体大小"
+    },
+    {
+      "type": "input",
+      "key": "chr_label_fmt_fillColor",
+      "label": "基因组标签字体颜色"
+    },
+    {
+      "type": "switch",
+      "key": "show_chr_scale",
+      "label": "显示基因组刻度"
+    },
+    {
+      "type": "number",
+      "key": "chr_scale_step",
+      "label": "基因组每个刻度表示的碱基数"
+    },
+    {
+      "type": "number",
+      "key": "chr_scale_dr",
+      "label": "基因组刻度线长度"
+    },
+    {
+      "type": "number",
+      "key": "chr_scale_fmt_strokeWidth",
+      "label": "基因组刻度线粗细"
+    },
+    {
+      "type": "number",
+      "key": "chr_scale_label_fmt_fontSize",
+      "label": "基因组刻度标签字体大小"
+    },
+    {
+      "type": "switch",
+      "key": "show_karyotype",
+      "label": "显示核型条带",
+      "help": "显示基因组核型条带"
+    },    
+    {
+      "type": "switch",
+      "key": "show_cyto_label",
+      "label": "显示核型条带标签"
+    },
+    {
+      "type": "number",
+      "key": "cyto_label_dr",
+      "label": "核型条带标签与核型绘图区的径向内延距离"
+    },
+    {
+      "type": "number",
+      "key": "cyto_label_fmt_fontSize",
+      "label": "核型条带标签字体大小"
+    },
+    {
+      "type": "input",
+      "key": "cyto_label_fmt_fillColor",
+      "label": "核型条带标签字体颜色"
+    },
+    {
+      "type": "switch",
+      "key": "show_line",
+      "label": "显示折线图(line)"
+    },
+    {
+      "type": "number.3",
+      "key": "line_strokeWidth",
+      "label": "line线条粗细"
+    },
+    {
+      "type": "input.3",
+      "key": "line_strokeColor",
+      "label": "line线条颜色"
+    },
+    {
+      "type": "switch",
+      "key": "show_line_label",
+      "label": "显示折线图标签"
+    },
+    {
+      "type": "number.3",
+      "key": "line_label_fontSize",
+      "label": "line线条标签字体大小"
+    },
+    {
+      "type": "input.3",
+      "key": "line_label_fillColor",
+      "label": "line线条标签字体颜色"
+    }
+  ],
+  "extra": {
+
+  }
+}

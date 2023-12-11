@@ -1,0 +1,4 @@
+PlotName	PlotType	PlotData
+genome	genome	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLink/data/hg19.gsize.txt
+karyotype	karyotype	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLink/data/karyotype.human.hg19.txt
+gene-fushon	link	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosLink/data/sample_fusion.txt

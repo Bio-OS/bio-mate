@@ -1,0 +1,6 @@
+PlotName	PlotType	PlotData
+genome	genome	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosHist/data/hg19.gsize.txt
+karyotype	karyotype	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosHist/data/karyotype.human.hg19.txt
+depth1	hist	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosHist/data/sample_depth1.txt
+depth2	hist	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosHist/data/sample_depth2.txt
+depth3	hist	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosHist/data/sample_depth3.txt

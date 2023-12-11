@@ -1,0 +1,6 @@
+PlotName	PlotType	PlotData
+genome	genome	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosPoint/data/hg19.gsize.txt
+karyotype	karyotype	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosPoint/data/karyotype.human.hg19.txt
+SNP1	point	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosPoint/data/sample_snp1.txt
+SNP2	point	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosPoint/data/sample_snp2.txt
+SNP3	point	/opt/conda/lib/python3.10/site-packages/bio_mate/plot-defs/PyCircosPoint/data/sample_snp3.txt
