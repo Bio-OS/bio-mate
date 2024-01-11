@@ -3,9 +3,9 @@
     "dataFilePath":"pie.csv"
   },
   "columns": {
-    "Group": "Group",
-    "Value":"Value",
-    "Explode":"Explode"
+    "Group": "labels",
+    "Value":"sizes",
+    "Explode":"explode"
   },
   "general": {
     "title": "Pie Diagram",
