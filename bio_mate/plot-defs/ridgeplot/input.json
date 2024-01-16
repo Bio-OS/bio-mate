@@ -1,23 +1,24 @@
 {
   "dataFile":{
-    "dataFilePath":"data.csv"
+    "dataFilePath":"testData.csv"
   },
   "columns": {
-    "x": "total_bill",
-    "y":"day"
+    "Value": "Value",
+    "platform": "platform"
   },
   "general": {
-    "title": "Ridge Diagram",
-    "bordercolor":"black",
-    "alpha": 1,
-    "labelcolor":"black"
+    "Title": "Mul-Var Value Density Distribution Plot",
+    "BaseLabelSize": 26,
+    "BaseLineSize":0.5,
+    "plotwidth":2000,
+    "plotheight":1600,
+    "pictureRes":300,
+    "titlehjust":0.5,
+    "Color":["#5E4FA2","#3288BD","#66C2A5","#ABDDA4","#E6F598","#FFFFBF","#FEE08B","#FDAE61","#F46D43","#D53E4F","#9E0142"]
   },
   "plot_settings": {
-    "xlabels":"day",
-    "ylabels":"total_bill",
-    "color":"red",
-    "figwidth":4, 
-    "figheight":3,
-    "fontsize":12
+    "ridges_gradientSize": 3,
+    "center_axis_labels":true,
+    "grid":true
   }
 }

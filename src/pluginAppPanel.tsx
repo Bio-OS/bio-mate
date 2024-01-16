@@ -1,6 +1,6 @@
 import { IconBiomateLogo } from '@arco-iconbox/react-biomate';
 // import '@arco-design/web-react/dist/css/arco.css';
-import { Message } from '@arco-design/web-react';
+import { Message, Typography } from '@arco-design/web-react';
 import { ReactWidget } from '@jupyterlab/apputils';
 import { NotebookActions } from '@jupyterlab/notebook';
 import { LabIcon } from '@jupyterlab/ui-components';
@@ -72,7 +72,7 @@ export class AppPanelWidget extends ReactWidget {
 
 function AppPanel() {
   return (
-    <div style={{ backgroundColor: 'white', height: '100%' }}>
+    <div style={{ backgroundColor: 'white', height: '100%', overflow: 'auto' }}>
       <div style={{ padding: '16px 20px', display: 'flex' }}>
         <IconBiomateLogo style={{ width: 100, height: 20 }} />
       </div>
@@ -102,7 +102,7 @@ function PanelSection({
         style={{
           display: 'grid',
           gap: '16px 8px',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(60px, 1fr))',
+          gridTemplateColumns: 'repeat(auto-fill, minmax(80px, 1fr))',
           gridAutoFlow: 'dense'
         }}
       >
@@ -150,7 +150,21 @@ function PanelSection({
               <div className="bioMateIconContainer">
                 <Icon style={{ color, fontSize: 20 }} />
               </div>
-              <div>{name}</div>
+              <div style={{ fontSize: 12, width: '100%', textAlign: 'center' }}>
+                <Typography.Text
+                  className="mb0"
+                  ellipsis={{
+                    showTooltip: {
+                      type: 'popover',
+                      props: {
+                        position: 'bottom'
+                      }
+                    }
+                  }}
+                >
+                  {name}
+                </Typography.Text>
+              </div>
             </div>
           );
         })}

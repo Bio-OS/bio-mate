@@ -1,16 +1,30 @@
 import {
-  IconAreaChart,
+  IconARG,
+  IconAnnotation,
   IconBoxPlot,
+  IconCirclepie,
   IconComprehensiveEvaluation,
-  IconConversionAnalysis,
+  IconCorrelation,
   IconCurve,
   IconDataVisualization,
-  IconEllipse,
-  IconFunnelPlot,
-  IconIGV,
+  IconDensityPoint,
+  IconDistribution,
+  IconEmbedding,
+  IconHeatmap,
+  IconKdeplot,
   IconLevelTest,
+  IconMulti,
   IconPiechart,
-  IconScatterPlot
+  IconPyCircos,
+  IconPyCirosHist,
+  IconPyCirosLine,
+  IconPyCirosLink,
+  IconPyCirosPoint,
+  IconRidgePlot,
+  IconScatterPlot,
+  IconSpatialplot,
+  IconTTestViolin,
+  IconVenn
 } from '@arco-iconbox/react-biomate';
 
 export const WIDGET_ID_APP_PANEL = 'bioMate:appPanel';
@@ -22,34 +36,112 @@ export const MODULE_VERSION = '1.0.0';
 
 export const basicPlotApps = [
   {
-    id: 'volcano',
-    name: '火山散点图',
+    id: 'Volcano',
+    name: '火山图',
     icon: IconScatterPlot,
     color: '#4E925A'
   },
-  { id: 'venn', name: '韦恩图', icon: IconPiechart, color: '#368ECE' },
-  { id: 'vertical-bar-plot', name: '柱状图', icon: IconLevelTest, color: '#368ECE' },
-  { id: '', name: '饼图', icon: IconPiechart, color: '#AC7300' },
-  { id: '', name: '条形图', icon: IconConversionAnalysis, color: '#AC7300' },
-  { id: '', name: '面积图', icon: IconAreaChart, color: '#D45900' },
-  { id: '', name: '折线图', icon: IconCurve, color: '#4E925A' },
-  { id: '', name: '箱型图', icon: IconBoxPlot, color: '#D45900' },
-  { id: '', name: '直方图', icon: IconDataVisualization, color: '#368ECE' },
-  { id: '', name: '漏斗图', icon: IconFunnelPlot, color: '#368ECE' },
-  { id: '', name: '环形图', icon: IconEllipse, color: '#AC7300' },
+  { id: 'Venn', name: '韦恩图', icon: IconVenn, color: '#D45900' },
+  { id: 'Barplot', name: '柱状图', icon: IconLevelTest, color: '#368ECE' },
+  { id: 'Boxplot', name: '箱线图', icon: IconBoxPlot, color: '#D45900' },
   {
-    id: '',
+    id: 'Histplot',
+    name: '直方图',
+    icon: IconDataVisualization,
+    color: '#368ECE'
+  },
+  { id: 'Kdeplot', name: '密度图', icon: IconKdeplot, color: '#7F7F7F' },
+  { id: 'Lineplot', name: '线图', icon: IconCurve, color: '#4E925A' },
+  { id: 'Pieplot', name: '饼图', icon: IconPiechart, color: '#AC7300' },
+  {
+    id: 'Radarplot',
     name: '雷达图',
     icon: IconComprehensiveEvaluation,
     color: '#4E925A'
   },
-  { id: 'circlepie', name: '环形饼图', icon: IconEllipse, color: '#4E925A' },
-  { id: 'correlation', name: '相关性热图', icon: IconScatterPlot, color: '#4E925A' },
-  { id: 'densitypoint', name: '密度相关图', icon: IconScatterPlot, color: '#4E925A' },
-  { id: 'distribution', name: '多变量值密度分布图', icon: IconScatterPlot, color: '#4E925A' },
-  { id: 'ridge', name: '峰峦图', icon: IconScatterPlot, color: '#4E925A' },
-  { id: 't-test-violin', name: '多变量检验提琴箱型组合图', icon: IconScatterPlot, color: '#4E925A' },
+  {
+    id: 'Ridgeplot',
+    name: '峰峦图 (岭图)',
+    icon: IconRidgePlot,
+    color: '#7F7F7F'
+  },
+  { id: 'Circlepie', name: '环形饼图', icon: IconCirclepie, color: '#D45900' },
+  {
+    id: 'DensityPoint',
+    name: '密度点图',
+    icon: IconDensityPoint,
+    color: '#368ECE'
+  },
+  {
+    id: 'Distribution',
+    name: '密度曲线分布图',
+    icon: IconDistribution,
+    color: '#AC7300'
+  },
+  {
+    id: 'T-testViolin',
+    name: '小提琴图',
+    icon: IconTTestViolin,
+    color: '#368ECE'
+  },
+  {
+    id: 'Correlation',
+    name: '相关性热图',
+    icon: IconCorrelation,
+    color: '#4E925A'
+  },
+  { id: 'Heatmap', name: '热图', icon: IconHeatmap, color: '#D45900' }
 ];
+
 export const advancedPlotApps = [
-  { id: '', name: 'IGV', icon: IconIGV, color: '#7F7F7F' }
+  { id: 'ARG', name: 'ARG', icon: IconARG, color: '#7F7F7F' },
+  { id: 'Multi', name: '多图生成', icon: IconMulti, color: '#368ECE' },
+  {
+    id: 'PyCircos',
+    name: '环形基因组图',
+    icon: IconPyCircos,
+    color: '#4E925A'
+  },
+  {
+    id: 'PyCircosHist',
+    name: '基因组柱状圈图',
+    icon: IconPyCirosHist,
+    color: '#D45900'
+  },
+  {
+    id: 'PyCircosPoint',
+    name: '基因组点状圈图',
+    icon: IconPyCirosPoint,
+    color: '#AC7300'
+  },
+  {
+    id: 'PyCircosLine',
+    name: '基因组折线圈图',
+    icon: IconPyCirosLine,
+    color: '#368ECE'
+  },
+  {
+    id: 'PyCircosLink',
+    name: '基因组关联圈图',
+    icon: IconPyCirosLink,
+    color: '#368ECE'
+  },
+  {
+    id: 'Annotation',
+    name: '单细胞自动注释',
+    icon: IconAnnotation,
+    color: '#4E925A'
+  },
+  {
+    id: 'Embedding',
+    name: '低维可视化',
+    icon: IconEmbedding,
+    color: '#7F7F7F'
+  },
+  {
+    id: 'Spatialplot',
+    name: '空间转录组数据可视化',
+    icon: IconSpatialplot,
+    color: '#AC7300'
+  }
 ];

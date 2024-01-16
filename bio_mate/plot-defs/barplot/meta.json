@@ -1,25 +1,25 @@
 {
-  "name": {
-    "zh_cn": "柱状图",
-    "en": "Box Diagram"
-  },
-  "alias": ["barplot"],
-  "intro": {
-    "zh_cn": "柱状图",
-    "en": "barplot"
-  },
-  "src": "数据文件，支持csv，tsv，txt，xlsx",
-  "sample_img": "img.png",
-  "sample_data_file": "data.csv",
-  "output_img": "output.png",
-  "main": "barplot.py",
-  "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
-  "href": "./",
-  "tag": ["vue", "ranking"],
-  "meta": {
-    "score": 5,
-    "author": "Zehua Zeng",
-    "releaseDate": "2023-11-20",
-    "updateDate": "2023-11-20"
+    "name": {
+      "zh_cn": "柱状图",
+      "en": "Bar Plot"
+    },
+    "alias": ["SDY-Bar"],
+    "intro": {
+      "zh_cn": "柱状图是表示数据量的可视化方式",
+      "en": "Bar Plot"
+    },
+    "src": "",
+    "sample_img": "img.png",
+    "sample_data_file": "testData2.csv",
+    "output_img": "output.png",
+    "main": "Biomate-zhedian.r",
+    "run": ["Rscript", "{main}", "plot", "--config", "input.json"],
+    "href": "/basic/barplot",
+    "tag": ["vue", "ranking"],
+    "meta": {
+      "score": 5,
+      "author": "CAU | Dongyan Shao",
+      "releaseDate": "2023-09-22",
+      "updateDate": "2023-09-22"
+    }
   }
-}

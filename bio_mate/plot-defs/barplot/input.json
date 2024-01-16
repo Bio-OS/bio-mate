@@ -1,22 +1,30 @@
 {
-  "dataFile":{
-    "dataFilePath":"data.csv"
+  "dataFile": {
+    "dataFilePath": "testData2.csv"
   },
   "columns": {
-    "x": "day",
-    "y":"total_bill"
+    "Antibiotics": "Antibiotics",
+    "Total.Number":"Total.number",
+    "Resistance.rate": "Resistance.rate",
+    "Origin": "origin"
   },
   "general": {
-    "title": "Bar Diagram",
-    "bordercolor":"black",
-    "alpha": 1,
-    "labelcolor":"black"
+    "title": "耐药率柱状图",
+    "lab_name": "物种",
+    "x_name": "",
+    "y_name": "耐药率"
   },
   "plot_settings": {
-    "xlabels":"day",
-    "ylabels":"total_bill",
-    "fontsize":12,
-    "width":0.8,
-    "color":"#1f577b"
+    "colortype":"AAAS",
+    "coloryouchoose":["#FB9A99","#B2DF8A"],
+    "cuti":"Yes",
+    "zitisize":20,
+    "shunxu":"first",
+    "pailie":"Ascending Order",
+    "pvaluebiaoji":"Yes",
+    "shuzhibiaoji":"Yes",
+    "width":8,
+    "height":6,
+    "pheight":4
   }
 }

@@ -57,7 +57,7 @@
   "dependencies": {
     "@arco-themes/react-bioos": "0.0.13",
     "@arco-design/web-react": "^2.51.0",
-    "@arco-iconbox/react-biomate": "^0.0.2",
+    "@arco-iconbox/react-biomate": "0.0.4",
     "@jupyter-widgets/base": "4",
     "@jupyterlab/application": "3",
     "@jupyterlab/apputils": "3",

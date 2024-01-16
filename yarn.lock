@@ -33,10 +33,10 @@
     scroll-into-view-if-needed "2.2.20"
     shallowequal "^1.1.0"
 
-"@arco-iconbox/react-biomate@^0.0.2":
-  version "0.0.2"
-  resolved "https://registry.npmjs.org/@arco-iconbox/react-biomate/-/react-biomate-0.0.2.tgz#9d2e2938d2fc83153d5855161ad4288bb7e7cb2f"
-  integrity sha512-xETb2iM3I/fDfYS56E/jE1xcFi6OtK7cfYpxcnxTAWgoScP4XXydirtZVluSKnFhnxcRtnFchAHEFxeV4eti4g==
+"@arco-iconbox/react-biomate@0.0.4":
+  version "0.0.4"
+  resolved "https://registry.npmjs.org/@arco-iconbox/react-biomate/-/react-biomate-0.0.4.tgz#6688094a636932d8f48250bc55d3254b2d23ed97"
+  integrity sha512-B+RnzQyq9gzpjSP1+hWEzp7XZ69+X5HfAqAwV9FHPusVfL/+1vcdQ+j/IOqhRVjcVACUo7F9tqsDA/s9vzO0ug==
 
 "@arco-themes/react-bioos@0.0.13":
   version "0.0.13"
