@@ -259,7 +259,11 @@ export default function Plot({
               key="data"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form form={formDataFiles}>
+              <Form
+                form={formDataFiles}
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+              >
                 <Form.Item
                   label="数据文件"
                   field="dataFilePath"
@@ -298,21 +302,39 @@ export default function Plot({
               key="dataArg"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form form={formDataParams}>{genFormItem(ui.columns)}</Form>
+              <Form
+                form={formDataParams}
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+              >
+                {genFormItem(ui.columns)}
+              </Form>
             </Tabs.TabPane>
             <Tabs.TabPane
               title="绘图参数"
               key="extra"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form form={formPlotParams}>{genFormItem(ui.plot_settings)}</Form>
+              <Form
+                form={formPlotParams}
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+              >
+                {genFormItem(ui.plot_settings)}
+              </Form>
             </Tabs.TabPane>
             <Tabs.TabPane
               title="通用参数"
               key="common"
               style={{ paddingRight: 12, height: 280, overflow: 'auto' }}
             >
-              <Form form={formCommonParams}>{genFormItem(ui.general)}</Form>
+              <Form
+                form={formCommonParams}
+                labelCol={{ span: 8 }}
+                wrapperCol={{ span: 16 }}
+              >
+                {genFormItem(ui.general)}
+              </Form>
             </Tabs.TabPane>
           </Tabs>
         </main>
@@ -505,7 +527,7 @@ function genFormItem(itemDefArr: any[]) {
 
     const label = (
       <>
-        <span>{item.label}</span>
+        {item.label}
         {item.help ? (
           <Tooltip content={item.help}>
             <IconQuestionCircle

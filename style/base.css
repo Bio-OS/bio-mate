@@ -59,3 +59,9 @@
   height: 36px;
   padding: 8px;
 }
+
+/* arco overrides */
+.arco-form-label-item > label {
+  display: inline-block;
+  text-align: left;
+}
