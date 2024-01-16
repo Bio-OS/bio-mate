@@ -43,8 +43,13 @@ export interface PlotResponse extends CommResponse {
   };
 }
 
+const BIO_MATE_PLOT_META = 'bioMatePlotMeta';
 const BIO_MATE_PLOT_CONFIG = 'bioMatePlotConfig';
 const BIO_MATE_PLOT_RESULT = 'bioMatePlotResult';
+
+interface PlotMeta {
+  type: string;
+}
 
 interface PlotResult {
   type: 'image';
@@ -108,7 +113,11 @@ export default function Plot({
       const plotConfig = cell?.model.metadata.get(BIO_MATE_PLOT_CONFIG) as {
         [key: string]: any;
       };
-      const values = plotConfig || initialValues;
+      const plotMeta = cell?.model.metadata.get(
+        BIO_MATE_PLOT_META
+      ) as unknown as PlotMeta;
+      const values =
+        plotMeta?.type === type && plotConfig ? plotConfig : initialValues;
 
       formDataFiles.setFieldsValue(values.dataFile);
       formDataParams.setFieldsValue(values.columns);
@@ -120,8 +129,11 @@ export default function Plot({
       const result = cell?.model.metadata.get(
         BIO_MATE_PLOT_RESULT
       ) as unknown as PlotResult;
+      const plotMeta = cell?.model.metadata.get(
+        BIO_MATE_PLOT_META
+      ) as unknown as PlotMeta;
 
-      if (!result) return;
+      if (!result || plotMeta?.type !== type) return;
 
       setImgPlot(result.data);
     }
@@ -180,7 +192,7 @@ export default function Plot({
             borderRadius: 3
           }}
         >
-          bio_mate.plot(type="volcano")
+          bio_mate.plot(type="Volcano")
         </code>
       </div>
     );
@@ -462,6 +474,7 @@ export default function Plot({
                 console.log('allValues:', allValues);
                 const cell = getCell();
                 cell?.model.metadata.set(BIO_MATE_PLOT_CONFIG, allValues);
+                cell?.model.metadata.set(BIO_MATE_PLOT_META, { type });
 
                 setGenerating(true);
                 refRequest.current?.genPlot(allValues).then(val => {
