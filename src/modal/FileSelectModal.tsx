@@ -13,39 +13,31 @@ interface CommFile {
 export default function FileSelectModal({
   commRequest,
   onOk,
-  render
+  render,
+  initialPath
 }: {
   commRequest?: CommRequest;
   render(open: () => void, close: () => void): ReactNode;
   onOk(filePath: string): void;
+  initialPath: string;
 }) {
   const [visible, setVisible] = useState(false);
   const [loading, setLoading] = useState(false);
-  const [currentPath, setCurrentPath] = useState('/');
-  const refInit = useRef(true);
+  const [currentPath, setCurrentPath] = useState('');
   const [commFiles, setCommFiles] = useState<CommFile[]>();
 
   const [selectedRowKeys, setSelectedRowKeys] = useState<string[]>([]);
 
-  useEffect(() => {
-    if (!visible) return;
-
-    refInit.current = true;
-  }, [visible]);
-
-  useEffect(() => {
-    if (!visible) return;
-
-    if (refInit.current) {
-      setCurrentPath('/');
-    }
+  function fetchFileList(path?: string) {
+    const targetPath = path || currentPath;
 
     setLoading(true);
-    setSelectedRowKeys([]);
-    commRequest?.listFiles(refInit.current ? '/' : currentPath).then(val => {
+    commRequest?.listFiles(targetPath).then(val => {
       if (val.response.status === 'failed') {
+        setCommFiles([]);
+
         Message.error(
-          `获取文件列表失败，请检查输入路径 ${currentPath}，确认文件系统访问权限`
+          `获取文件列表失败，请检查输入路径 ${targetPath}，确认文件系统访问权限`
         );
         return;
       }
@@ -70,10 +62,15 @@ export default function FileSelectModal({
 
       setCommFiles(sortedFiles);
       setLoading(false);
-
-      refInit.current = false;
     });
-  }, [visible, currentPath]);
+  }
+
+  useEffect(() => {
+    if (!visible) return;
+
+    setCurrentPath(initialPath);
+    fetchFileList(initialPath);
+  }, [visible]);
 
   return (
     <>
@@ -103,6 +100,7 @@ export default function FileSelectModal({
           path={currentPath}
           setPath={path => {
             setCurrentPath(path);
+            fetchFileList(path);
           }}
         />
 
@@ -136,7 +134,10 @@ export default function FileSelectModal({
                   <Link
                     style={{ display: 'block' }}
                     onClick={() => {
-                      setCurrentPath(currentPath + item.name + '/');
+                      const path = currentPath + item.name + '/';
+
+                      setCurrentPath(path);
+                      fetchFileList(path);
                     }}
                   >
                     <IconFolder style={{ marginRight: 4 }} />

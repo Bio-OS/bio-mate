@@ -268,6 +268,7 @@ export default function Plot({
                       <>
                         <div style={{ marginBottom: 16 }}>
                           <FileSelectModal
+                            initialPath={all_defs.BIOMATE_CONFIG.init_path}
                             commRequest={refRequest.current}
                             onOk={filePath => {
                               form.setFieldValue('dataFilePath', filePath);

@@ -6,7 +6,13 @@ import base64
 current_file = Path(__file__)
 plot_defs = current_file.parents[0] / "plot-defs"
 
-all_defs = {}
+
+def get_init_path():
+    """选择数据文件时，初始路径"""
+    return str(Path.home()) + "/"
+
+
+all_defs = {"BIOMATE_CONFIG": {"init_path": get_init_path()}}
 for dir_plot in plot_defs.iterdir():
     if dir_plot.name.startswith(".") or dir_plot.is_file():
         continue
