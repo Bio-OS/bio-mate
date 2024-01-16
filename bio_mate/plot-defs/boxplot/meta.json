@@ -13,7 +13,7 @@
   "sample_data_file": "data.csv",
   "output_img": "output.png",
   "main": "boxplot.py",
-  "run": ["Python", "{main}", "plot", "--config", "input.json","--output","output.png"],
+  "run": ["python", "{main}", "plot", "--config", "input.json","--output","output.png"],
   "href": "./",
   "tag": ["vue", "ranking"],
   "meta": {
