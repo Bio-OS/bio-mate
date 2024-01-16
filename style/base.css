@@ -9,6 +9,26 @@
   margin-left: 4px;
 }
 
+.mb0 {
+  margin-bottom: 0 !important;
+}
+
+.fs13 {
+  font-size: 13px;
+}
+
+.corlor1 {
+  color: #0c0d0e;
+}
+
+.color3 {
+  color: #737a87;
+}
+
+.dpib {
+  display: inline-block;
+}
+
 .bioMateWidget {
   display: flex;
   flex-direction: column;

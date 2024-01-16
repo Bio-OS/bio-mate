@@ -1,5 +1,6 @@
 import {
   Button,
+  Divider,
   Form,
   Grid,
   Input,
@@ -9,7 +10,8 @@ import {
   Spin,
   Switch,
   Tabs,
-  Tooltip
+  Tooltip,
+  Typography
 } from '@arco-design/web-react';
 import {
   IconCheck,
@@ -322,10 +324,37 @@ export default function Plot({
             borderRadius: '0 0 8px 8px',
             padding: '20px 32px',
             display: min ? 'none' : 'flex',
-            justifyContent: 'space-between'
+            justifyContent: 'space-between',
+            alignItems: 'end'
           }}
         >
+          <div className="fs13 color3">
+            <div>
+              工具由
+              <Typography.Text
+                className="mx4 mb0 dpib"
+                style={{ maxWidth: 220 }}
+                ellipsis={{
+                  showTooltip: {
+                    type: 'popover'
+                  }
+                }}
+              >
+                {meta.meta?.author}
+              </Typography.Text>
+              贡献
+            </div>
+            <div>最近更新时间 {meta.meta?.updateDate}</div>
+          </div>
+
           <div>
+            <Button
+              style={{ marginRight: 12 }}
+              onClick={() => downloadImgSrc()}
+              disabled={!imgPlot}
+            >
+              下载
+            </Button>
             <RunLogModal
               plotResponse={plotResponse}
               render={open => {
@@ -352,8 +381,8 @@ export default function Plot({
                 );
               }}
             />
-          </div>
-          <div>
+
+            <Divider type="vertical" />
             <Button
               style={{ marginRight: 12 }}
               onClick={() => {
@@ -458,14 +487,6 @@ export default function Plot({
               borderRadius: 8
             }}
           />
-          {/* the button style could be modified */}
-          <Button
-            type="primary"
-            style={{ marginTop: 10, marginLeft: 10 }}
-            onClick={() => downloadImgSrc()}
-          >
-            保存图片
-          </Button>
         </Spin>
       )}
     </>
