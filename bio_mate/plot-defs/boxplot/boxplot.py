@@ -144,5 +144,5 @@ if __name__ == "__main__":
     if args.action == 'plot':
         plot_boxplot(args.config, args.output)
     else:
-        print('Invalid action. Use "plot" to generate a volcano plot.')
+        print('Invalid action. Use "plot" to generate a boxplot.')
 
