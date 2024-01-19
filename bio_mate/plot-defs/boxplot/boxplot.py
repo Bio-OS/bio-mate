@@ -93,10 +93,16 @@ def plot_boxplot(config_file, output_file):
     x=config['columns']['x']
     y=config['columns']['y']
     hue=config['columns']['hue']
-    fontsize=int(config['plot_settings']['fontsize'])
+    fontsize=int(config['general']['fontsize'])
     color=config['plot_settings']['palette']
     xlabels=config['plot_settings']['xlabels']
     ylabels=config['plot_settings']['ylabels']
+    saturation=config['plot_settings']['saturation']
+    dodge=config['plot_settings']['dodge']
+    fliersize=config['plot_settings']['fliersize']
+    linewidth=config['plot_settings']['linewidth']
+    width=int(config['plot_settings']['width'])
+    height=int(config['plot_settings']['height'])
     title=config['general']['title']
 
     if color=='red':
@@ -116,10 +122,11 @@ def plot_boxplot(config_file, output_file):
     print(data.head())
     # Draw a nested boxplot to show bills by day and time
     import matplotlib.pyplot as plt
-    fig, ax = plt.subplots(figsize=(4,4))
-    sns.boxplot(x=x, y=y,
-                hue=hue, palette=color,
-                data=data,ax=ax)
+    fig, ax = plt.subplots(figsize=(width,height))
+    sns.boxplot(x=x, y=y, hue=hue, data=data, palette=color, saturation=saturation, dodge=True, fliersize=fliersize, linewidth=linewidth, ax=ax)
+    # sns.boxplot(x=x, y=y,
+    #             hue=hue, palette=color,
+    #             data=data,ax=ax)
     sns.despine(offset=10, trim=True)
     plt.xticks(fontsize=fontsize)
     plt.yticks(fontsize=fontsize)

@@ -9,14 +9,17 @@
   },
   "general": {
     "title": "Box Diagram",
-    "bordercolor":"black",
-    "alpha": 0.8,
-    "labelcolor":"black"
+    "fontsize":12
   },
   "plot_settings": {
     "xlabels":"day",
     "ylabels":"total_bill",
-    "fontsize":12,
-    "palette":"Red"
+    "palette":"red",
+    "saturation":0.75,
+    "width":4,
+    "height":4,
+    "dodge":true, 
+    "fliersize":5, 
+    "linewidth":1
   }
 }

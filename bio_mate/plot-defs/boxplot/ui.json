@@ -48,23 +48,11 @@
       "placeholder": "请输入标题"
     },
     {
-      "type": "number",
-      "key": "alpha",
-      "label": "透明度",
-      "placeholder": "请输入透明度值"
-    },
-    {
       "type": "input",
-      "key": "labelcolor",
-      "label": "标签颜色",
-      "placeholder": "请输入标签颜色"
-    },
-    {
-      "type": "input",
-      "key": "bordercolor",
-      "label": "边界颜色",
-      "help": "请输入边界颜色,如black",
-      "placeholder": "请输入"
+      "key": "fontsize",
+      "label": "字体大小",
+      "placeholder": "请输入字体大小",
+      "help": "请输入字体大小"
     }
   ],
   "plot_settings": [
@@ -84,17 +72,49 @@
     },
     {
       "type": "input",
-      "key": "fontsize",
-      "label": "字体大小",
-      "placeholder": "请输入字体大小",
-      "help": "请输入字体大小"
-    },
-    {
-      "type": "input",
       "key": "palette",
       "label": "颜色组的类型",
       "placeholder": "请输入颜色名red,orange,blue或green",
       "help": "如需自定义颜色请用,做分隔符，如'#00FF00','#0000FF'"
+    },
+    {
+      "type": "number",
+      "key": "saturation",
+      "label": "饱和度",
+      "placeholder": "请输入饱和度",
+      "help":"控制用于绘制颜色的原始饱和度的比例。通常大幅填充在轻微不饱和的颜色下看起来更好，如果您希望绘图颜色与输入颜色规格完美匹配可将其设置为1"
+    },
+    {
+      "type": "number",
+      "key": "width",
+      "label": "宽度",
+      "placeholder": "请输入宽度",
+      "help":"绘图宽度"
+    },
+    {
+      "type": "number",
+      "key": "height",
+      "label": "高度",
+      "placeholder": "请输入高度",
+      "help":"绘图高度"
+    },
+    {
+      "type": "switch",
+      "key": "dodge",
+      "label": "是否沿分类轴移动",
+      "help":"使用色调嵌套时，元素是否应沿分类轴移动"
+    },
+    {
+      "type": "number",
+      "key": "fliersize",
+      "label": "异常值标记大小",
+      "help":"用于表示异常值观察的标记的大小"
+    },
+    {
+      "type": "number",
+      "key": "linewidth",
+      "label": "构图元素的灰线宽度",
+      "help":"构图元素的灰线宽度"
     }
   ],
   "extra": {
