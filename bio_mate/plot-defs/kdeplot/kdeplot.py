@@ -136,14 +136,15 @@ def plot_kdeplot(config_file, output_file):
     #通用设置
     title=config['general']['title']
     alpha=float(config['general']['alpha'])
-
+    width=int(config['general']['width'])
+    height=int(config['general']['height'])
 
     #开始绘图
     data=read(data_file_path)
     print(data.head())
     # Draw a nested boxplot to show bills by day and time
     import matplotlib.pyplot as plt
-    fig, ax = plt.subplots(figsize=(4,4))
+    fig, ax = plt.subplots(figsize=(width,height))
     sns.kdeplot(data[x], 
             fill=True, 
             label=x,

@@ -7,9 +7,9 @@
   },
   "general": {
     "title": "Kde Diagram",
-    "bordercolor":"black",
     "alpha": 0.8,
-    "labelcolor":"black"
+    "width":4,
+    "height":4
   },
   "plot_settings": {
     "xlabels":"Total Bill",
