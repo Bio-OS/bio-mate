@@ -7,9 +7,7 @@
   },
   "general": {
     "title": "Radar Diagram",
-    "bordercolor":"black",
-    "alpha": 0.1,
-    "labelcolor":"black"
+    "alpha": 1
   },
   "plot_settings": {
     "color":"red",

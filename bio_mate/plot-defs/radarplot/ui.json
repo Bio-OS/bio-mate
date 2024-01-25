@@ -39,19 +39,6 @@
       "key": "alpha",
       "label": "透明度",
       "placeholder": "请输入透明度值"
-    },
-    {
-      "type": "input",
-      "key": "labelcolor",
-      "label": "标签颜色",
-      "placeholder": "请输入标签颜色"
-    },
-    {
-      "type": "input",
-      "key": "bordercolor",
-      "label": "边界颜色",
-      "help": "请输入边界颜色,如black",
-      "placeholder": "请输入"
     }
   ],
   "plot_settings": [
