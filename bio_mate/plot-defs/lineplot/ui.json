@@ -53,19 +53,6 @@
       "key": "alpha",
       "label": "透明度",
       "placeholder": "请输入透明度值"
-    },
-    {
-      "type": "input",
-      "key": "labelcolor",
-      "label": "标签颜色",
-      "placeholder": "请输入标签颜色"
-    },
-    {
-      "type": "input",
-      "key": "bordercolor",
-      "label": "边界颜色",
-      "help": "请输入边界颜色,如black",
-      "placeholder": "请输入"
     }
   ],
   "plot_settings": [
@@ -94,7 +81,7 @@
       "type": "input",
       "key": "linewidth",
       "label": "线图的宽度",
-      "placeholder": "请输入线图的宽度，默认2.5",
+      "placeholder": "请输入线图的宽度,默认2.5",
       "help": "线图的宽度"
     },
     {
@@ -115,7 +102,7 @@
       "type": "input",
       "key": "figheight",
       "label": "图片高度",
-      "placeholder": "图片高度，默认为3",
+      "placeholder": "图片高度，默认为4",
       "help": "图片高度"
     }
   ],
