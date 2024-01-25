@@ -101,6 +101,11 @@ def plot_histplot(config_file, output_file):
     log_scale=config['plot_settings']['log_scale']
     histtype=config['plot_settings']['histtype']
     bins=int(config['plot_settings']['bins'])
+    density = config['plot_settings']['density']
+    align = config['plot_settings']['align']
+    orientation = config['plot_settings']['orientation']
+    rwidth = config['plot_settings']['rwidth']
+    stacked = config['plot_settings']['stacked']
 
 
     if log_scale=="True":
@@ -121,13 +126,18 @@ def plot_histplot(config_file, output_file):
     import matplotlib.pyplot as plt
     fig, ax = plt.subplots(figsize=(4,4))
     plt.hist(data[x], 
-         bins=bins,
-            fill=True, 
-            label=x,
-         color=color,
-         alpha=alpha,
+        bins=bins,
+        fill=True, 
+        label=x,
+        alpha= alpha,
+        color=color,
         histtype=histtype,
         log=log_scale,
+        density =density,
+        align = align,
+        orientation = orientation,
+        rwidth = rwidth,
+        stacked = stacked
         )
     sns.despine(offset=10, trim=True)
     plt.xticks(fontsize=fontsize)

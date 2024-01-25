@@ -7,17 +7,21 @@
   },
   "general": {
     "title": "Hist Diagram",
-    "bordercolor":"black",
-    "alpha": 0.8,
-    "labelcolor":"black"
+    "alpha":0.8
   },
   "plot_settings": {
     "xlabels":"Total Bill",
     "ylabels":"Density",
+    "alpha":0.8,
     "bins":10,
     "fontsize":12,
     "color":"#3B4A25",
-    "log_scale":"False",
-    "histtype":"bar"
+    "log_scale":false,
+    "histtype":"bar",
+    "density":false,
+    "align":"mid",
+    "orientation" : "vertical",
+    "rwidth":1,
+    "stacked": false
   }
 }

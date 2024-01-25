@@ -3,18 +3,6 @@
     "datTable": [
       {
         "label": "set1"
-      },
-      {
-        "label": "set2"
-      },
-      {
-        "label": "set3"
-      },
-      {
-        "label": "set4"
-      },
-      {
-        "label": "set5"
       }
     ]
   },
@@ -38,20 +26,7 @@
       "type": "number",
       "key": "alpha",
       "label": "透明度",
-      "placeholder": "请输入透明度值"
-    },
-    {
-      "type": "input",
-      "key": "labelcolor",
-      "label": "标签颜色",
-      "placeholder": "请输入标签颜色"
-    },
-    {
-      "type": "input",
-      "key": "bordercolor",
-      "label": "边界颜色",
-      "help": "请输入边界颜色,如black",
-      "placeholder": "请输入"
+      "placeholder": "请输入透明度"
     }
   ],
   "plot_settings": [
@@ -71,10 +46,17 @@
     },
     {
       "type": "input",
+      "key": "histtype",
+      "label": "直方图类型",
+      "placeholder": "可选bar,step",
+      "help": "表示直方图的类型，可以是'bar'、'barstacked'、'step'、'stepfilled'等"
+    },
+    {
+      "type": "input",
       "key": "bins",
       "label": "直方图数",
-      "placeholder": "请输入直方图数，默认为10",
-      "help": "请输入直方图数，默认为10"
+      "placeholder": "请输入直方图数,默认为10",
+      "help": "请输入直方图数,默认为10"
     },
     {
       "type": "input",
@@ -91,18 +73,63 @@
       "help": "请输入直方图颜色"
     },
     {
-      "type": "input",
-      "key": "log_scale",
-      "label": "纵坐标对数化",
-      "placeholder": "纵坐标是否对数化，True或者False",
-      "help": "纵坐标对数化"
+      "type": "number",
+      "key": "rwidth",
+      "label": "箱子宽度",
+      "placeholder": "请每个箱子的宽度,默认为1",
+      "help": "请每个箱子的宽度,默认为1"
     },
     {
-      "type": "input",
-      "key": "histtype",
-      "label": "直方图类型",
-      "placeholder": "可选bar,step",
-      "help": "直方图类型"
+      "type": "select",
+      "options": [
+        { "label": "false", "value": false },
+        { "label": "true", "value": true }
+      ],
+      "key": "log_scale",
+      "label": "纵坐标对数化",
+      "placeholder": "纵坐标是否对数化,True或者False",
+      "help": "表示是否在y轴上使用对数刻度"
+    },
+    {
+      "type": "select",
+      "options": [
+        { "label": "false", "value": false },
+        { "label": "true", "value": true }
+      ],
+      "key": "density",
+      "label": "直方图归一化",
+      "help": "可选参数，表示是否将直方图归一化"
+    },
+    {
+      "type": "select",
+      "options": [
+        { "label": "mid", "value": "mid" },
+        { "label": "left", "value": "left" },
+        { "label": "right", "value": "right" }
+      ],
+      "key": "align",
+      "label": "对齐方式",
+      "help": "直方图箱子的对齐方式"
+    },
+    {
+      "type": "select",
+      "options": [
+        { "label": "垂直", "value": "vertical" },
+        { "label": "水平", "value": "horizontal" }
+      ],
+      "key": "orientation",
+      "label": "方向",
+      "help": "表示直方图的方向,可以是vertical、horizontal"
+    },
+    {
+      "type": "select",
+      "options": [
+        { "label": "false", "value": false },
+        { "label": "true", "value": true }
+      ],
+      "key": "stacked",
+      "label": "是否堆叠",
+      "help": "表示是否堆叠不同的直方图"
     }
   ],
   "extra": {
