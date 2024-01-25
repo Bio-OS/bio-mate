@@ -9,16 +9,16 @@
     "dataArg": {
       "datTable": [
         {
-          "label": "Antibiotics"
+          "label": "X轴刻度"
         },
         {
-          "label": "Total.Number"
+          "label": "Y轴刻度"
         },
         {
-          "label": "Resistance.rate"
+          "label": "数值"
         },
         {
-          "label": "origin"
+          "label": "分组"
         }     
       ]
     },
@@ -27,7 +27,7 @@
         "type": "input",
         "required": true,
         "key": "Antibiotics",
-        "label": "Antibiotics",
+        "label": "X轴类别名称",
         "placeholder": "请输入",
         "help": "请输入数据文件中类别列名称"
       },
@@ -35,7 +35,7 @@
         "type": "input",
         "required": true,
         "key": "Total.Number",
-        "label": "Total.Number",
+        "label": "Y轴数值",
         "placeholder": "请输入",
         "help": "请输入数据文件中总数列名称"
       },
@@ -43,7 +43,7 @@
         "type": "input",
         "required": true,
         "key": "Origin",
-        "label": "origin",
+        "label": "分组名称",
         "placeholder": "请输入",
         "help": "请输入数据文件分组列名称"
       },
@@ -51,7 +51,7 @@
         "type": "input",
         "required": true,
         "key": "Resistance.rate",
-        "label": "Resistance.rate",
+        "label": "数值",
         "placeholder": "请输入",
         "help": "请输入数据文件中百分比列名称"
       }
@@ -107,7 +107,7 @@
         "label": "数据颜色",
         "required": false,
         "placeholder": "请输入",
-        "help": "请输入你想要的两类数据颜色"
+        "help": "请输入你想要的两类数据颜色,用十六进制颜色表示"
       },              
       {
         "type": "number",
@@ -131,8 +131,8 @@
       {
         "type": "select",
         "options": [
-          { "label": "Ascending Order", "value": "Ascending Order" },
-          { "label": "Descending Order", "value": "Descending Order" }
+          { "label": "升序", "value": "Ascending Order" },
+          { "label": "降序", "value": "Descending Order" }
         ],
         "key": "pailie",
         "label": "排列",
@@ -185,39 +185,5 @@
         "placeholder": "请输入",
         "help": "请输入阈值，例如: 6"
       }
-    ],
-    "extra": {
-      "p_cutoff": {
-        "type": "combobox",
-        "label": "messages.basic.volcano.pCutoff",
-        "items": [0.1, 0.05, 0.01, 0.001, 0.0001, 1e-5, 1e-6, 1e-7, 1e-8],
-        "class": "col-12 col-md-6"
-      },
-      "fc_cutoff": {
-        "type": "combobox",
-        "label": "messages.basic.volcano.fcCutoff",
-        "items": [0.5, 1, 2, 3, 4, 5],
-        "class": "col-12 col-md-6"
-      },
-      "show_top": {
-        "type": "switch",
-        "label": "messages.basic.volcano.showTop",
-        "class": "col-12"
-      },
-      "show_genes_num": {
-        "type": "slider",
-        "label": "messages.basic.volcano.show_genes_num",
-        "class": "col-12 col-md-6",
-        "if": "show_top",
-        "max": 500
-      },
-      "selected_genes": {
-        "type": "combobox",
-        "multiple": true,
-        "label": "messages.basic.volcano.selected_genes",
-        "class": "col-12 col-md-6",
-        "if": "show_top",
-        "items_func": "this.selectCols('datTable', 0)"
-      }
-    }
+    ]
   }
