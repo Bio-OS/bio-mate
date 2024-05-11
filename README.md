@@ -39,7 +39,7 @@ python -m build
 To install the extension, execute:
 
 ```bash
-pip install bio_mate
+pip install -i https://test.pypi.org/simple/ bio-mate
 ```
 
 ## Uninstall
