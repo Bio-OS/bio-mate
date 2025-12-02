@@ -17,6 +17,6 @@ jobs:
       - name: Mirror code to Codeberg
         uses: yesolutions/mirror-action@master
         with:
-          REMOTE: 'https://codeberg.org/Bio-OS/bioos.git'
+          REMOTE: 'https://codeberg.org/Bio-OS/bio-mate.git'
           GIT_USERNAME: zhaoqiang_li
           GIT_PASSWORD: ${{ secrets.FORCODEBERG }}
